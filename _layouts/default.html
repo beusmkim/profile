@@ -20,6 +20,16 @@
       {% include sidebar.html %}
 
       <main class="content">
+        <div class="top-lang-switch">
+          {% if page.url contains '/ko/' %}
+            <a class="btn small active" href="{{ "/ko/" | relative_url }}">KO</a>
+            <a class="btn small" href="{{ "/" | relative_url }}">EN</a>
+          {% else %}
+            <a class="btn small" href="{{ "/ko/" | relative_url }}">KO</a>
+            <a class="btn small active" href="{{ "/" | relative_url }}">EN</a>
+          {% endif %}
+        </div>
+
         {% unless page.hide_title %}
           <header class="page-header">
             <h1 class="page-title">{{ page.title }}</h1>

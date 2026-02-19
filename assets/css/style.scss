@@ -551,7 +551,12 @@ hr{
 
 
 /* Language toggle */
-.lang-switch{display:flex; gap:8px; justify-content:center; margin-top:12px;}
+.top-lang-switch{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  margin:0 2px 10px 2px;
+}
 .btn.small{padding:8px 12px; font-size:12px; border-radius:999px;}
 .btn.small.active{font-weight:700;}
 
