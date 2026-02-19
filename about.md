@@ -1,15 +1,30 @@
 ---
 layout: default
-title: About Me
-subtitle: "AI Engineer · Data Analyst"
-permalink: /about
+title: About
 ---
 
-<div class="card">
-  데이터로 문제를 정의하고, 분석·모델링 결과를 마케팅/영업 실행으로 연결하는 PM 지향 AI·데이터 실무형 인재입니다.<br/>
-  CRM·로그·매출 데이터를 기반으로 고객을 세그먼트화하고 전환/이탈 예측, 추천, 메시지 생성 시나리오를 설계해
-  <strong>“인사이트 → 캠페인/상담/프로세스”</strong>로 이어지도록 구현해왔습니다.<br/><br/>
+# About
 
-  저는 성능 수치 자체보다 전처리·후처리·평가·운영 흐름을 함께 설계해 현업에서 반복 사용 가능한 구조를 만드는 데 강점이 있습니다.<br/>
-  현장 영업 경험을 바탕으로 고객 의사결정 포인트를 이해하고, 목표를 재설계해 팀이 바로 실행할 수 있는 스크립트·워크플로우로 표준화하며 성과를 만들어 왔습니다.
-</div>
+I’m Beomsoo Kim, focusing on **hardware-aware AI software**—because real performance is decided by **memory, bandwidth, and execution behavior**, not just model accuracy.
+
+## What I do
+I work between **AI models** and **hardware execution**:
+
+- CUDA-aware inference design (streams / async execution concepts)  
+- Mixed precision (FP16) + quantization (INT8) trade-offs  
+- Memory hierarchy awareness (VRAM footprint, allocation patterns, bandwidth bottlenecks)  
+- System design for stable throughput (compute isolation, worker-based scaling)  
+
+## Why this matters for AI silicon
+AI chips succeed only when the software stack can:
+- keep the accelerator **fed** (avoid memory stalls)  
+- map model execution efficiently (avoid unnecessary transfers / redundant graphs)  
+- validate performance using **real model behavior** (not synthetic benchmarks)  
+
+## Evidence (quantified)
+- **~38–40%** peak VRAM reduction via FP16 optimization  
+- **~22–27%** inference latency improvement  
+- **~35%** reduction in blocking under concurrent requests  
+
+## What I’m aiming for
+Model-level validation + runtime optimization aligned with silicon characteristics.

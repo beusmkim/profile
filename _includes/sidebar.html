@@ -17,12 +17,28 @@
       <a class="btn" href="https://github.com/BeusmKim">GitHub</a>
       <a class="btn" href="mailto:beumsu0702@naver.com">Email</a>
       <a class="btn" href="{{ "/assets/resume.pdf" | relative_url }}">Resume</a>
+      <div class="lang-switch">
+      {% if page.url contains '/ko/' %}
+        <a class="btn small active" href="{{ "/ko/" | relative_url }}">KO</a>
+        <a class="btn small" href="{{ "/" | relative_url }}">EN</a>
+      {% else %}
+        <a class="btn small" href="{{ "/ko/" | relative_url }}">KO</a>
+        <a class="btn small active" href="{{ "/" | relative_url }}">EN</a>
+      {% endif %}
     </div>
   </div>
 
   <nav class="nav">
+    {% if page.url contains '/ko/' %}
+    <a class="{% if page.url == "/ko/" or page.url == "/ko/index.html" %}active{% endif %}" href="{{ "/ko/" | relative_url }}">Home</a>
+    {% else %}
     <a class="{% if page.url == "/" %}active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
+    {% endif %}
+    {% if page.url contains '/ko/' %}
+    <a class="{% if page.url contains "/ko/about" %}active{% endif %}" href="{{ "/ko/about" | relative_url }}">About Me</a>
+    {% else %}
     <a class="{% if page.url contains "/about" %}active{% endif %}" href="{{ "/about" | relative_url }}">About Me</a>
+    {% endif %}
     <a class="{% if page.url contains "/projects" %}active{% endif %}" href="{{ "/projects" | relative_url }}">Projects</a>
     <a class="{% if page.url contains "/experience" %}active{% endif %}" href="{{ "/experience" | relative_url }}">Experience</a>
     <a class="{% if page.url contains "/contact" %}active{% endif %}" href="{{ "/contact" | relative_url }}">Contact</a>

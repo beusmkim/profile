@@ -40,5 +40,86 @@
         </footer>
       </main>
     </div>
-  </body>
+  
+{% comment %} Language Welcome Modal (shown on first visit) {% endcomment %}
+{% if page.url == "/" %}
+<div id="lang-modal" class="lang-modal" aria-hidden="true">
+  <div class="lang-modal__backdrop"></div>
+  <div class="lang-modal__card" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title">
+    <div class="lang-modal__header">
+      <div class="lang-modal__badge">WELCOME</div>
+      <h2 id="lang-modal-title" class="lang-modal__title">Choose your language</h2>
+      <p class="lang-modal__subtitle">언어를 선택해주세요</p>
+    </div>
+
+    <div class="lang-modal__actions">
+      <button class="lang-modal__btn" data-lang="en" type="button">English</button>
+      <button class="lang-modal__btn" data-lang="ko" type="button">한국어</button>
+    </div>
+
+    <div class="lang-modal__hint">
+      Tip: Your choice will be remembered on this device.
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  try {
+    var KEY = "portfolio_lang";
+    var preferred = localStorage.getItem(KEY);
+    // If already chosen, redirect immediately (keep root as EN)
+    if (preferred === "ko") {
+      window.location.replace("{{ '/ko/' | relative_url }}");
+      return;
+    }
+    // Only show modal if no choice stored
+    if (!preferred) {
+      var modal = document.getElementById("lang-modal");
+      if (!modal) return;
+
+      function openModal() {
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.documentElement.classList.add("has-lang-modal");
+      }
+
+      function closeModal() {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.documentElement.classList.remove("has-lang-modal");
+      }
+
+      modal.addEventListener("click", function(e) {
+        // click outside card closes? (we'll keep it open; ignore)
+        // Prevent accidental close: do nothing
+      });
+
+      var buttons = modal.querySelectorAll("[data-lang]");
+      buttons.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          var lang = btn.getAttribute("data-lang");
+          localStorage.setItem(KEY, lang);
+          if (lang === "ko") window.location.replace("{{ '/ko/' | relative_url }}");
+          else {
+            closeModal(); // stay on EN home
+          }
+        });
+      });
+
+      // Open on load
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", openModal);
+      } else {
+        openModal();
+      }
+    }
+  } catch (e) {
+    // If localStorage blocked, do nothing (default EN)
+  }
+})();
+</script>
+{% endif %}
+
+</body>
 </html>
