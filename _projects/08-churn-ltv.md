@@ -6,7 +6,7 @@ period: "2025–2026"
 role: "Data Analyst"
 stack: "Python, pandas, scikit-learn, Regression/Classification"
 image: /assets/img/projects/churn-ltv.jpg
-order: 20
+order: 990
 featured: false
 links:
   - label: "Repository"

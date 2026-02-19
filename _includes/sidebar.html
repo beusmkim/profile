@@ -31,8 +31,13 @@
     {% else %}
     <a class="{% if page.url contains "/about" %}active{% endif %}" href="{{ "/about" | relative_url }}">About Me</a>
     {% endif %}
+    {% if page.url contains '/ko/' %}
+    <a class="{% if page.url contains "/projects" %}active{% endif %}" href="{{ "/ko/projects" | relative_url }}">Projects</a>
+    <a class="{% if page.url contains "/experience" %}active{% endif %}" href="{{ "/ko/experience" | relative_url }}">Experience</a>
+    {% else %}
     <a class="{% if page.url contains "/projects" %}active{% endif %}" href="{{ "/projects" | relative_url }}">Projects</a>
     <a class="{% if page.url contains "/experience" %}active{% endif %}" href="{{ "/experience" | relative_url }}">Experience</a>
+    {% endif %}
     <a class="{% if page.url contains "/contact" %}active{% endif %}" href="{{ "/contact" | relative_url }}">Contact</a>
   </nav>
 

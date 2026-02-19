@@ -25,6 +25,12 @@
         {% if page.url contains "/ko/about" or page.url contains "/about" %}
           {% assign en_path = "/about" %}
           {% assign ko_path = "/ko/about" %}
+        {% elsif page.url == "/projects" or page.url == "/projects/" or page.url == "/ko/projects" or page.url == "/ko/projects/" %}
+          {% assign en_path = "/projects" %}
+          {% assign ko_path = "/ko/projects" %}
+        {% elsif page.url == "/experience" or page.url == "/experience/" or page.url == "/ko/experience" or page.url == "/ko/experience/" %}
+          {% assign en_path = "/experience" %}
+          {% assign ko_path = "/ko/experience" %}
         {% elsif page.url == "/" or page.url == "/ko/" or page.url == "/ko/index.html" %}
           {% assign en_path = "/" %}
           {% assign ko_path = "/ko/" %}

@@ -1,26 +1,28 @@
 ---
 layout: project
-title: "OneTakeStudio – Distributed AI Inference Architecture"
+title: "OneTakeStudio - Contention-Aware Distributed Inference Architecture"
+summary: "MSA-based compute isolation and worker separation to stabilize GPU throughput under concurrent inference load."
+stack: "MSA, CUDA-Aware Inference Runtime, Worker-Based Contention Control"
 image: /assets/img/projects/onetakestudio_mainpage.png
 ---
 
-## Overview
-Real-time video AI processing system designed with compute isolation and hardware-aware inference scaling.
+## Hardware Efficiency Focus
 
-## Architecture Highlights
+This project focused on runtime stability for concurrent inference workloads where GPU contention degraded throughput.
+The system was structured to isolate compute paths and prevent non-inference components from interfering with GPU-bound execution.
 
-### Compute Isolation (MSA)
-- Separated streaming (WebRTC) and AI inference workers
-- Prevented GPU contention
-- ~35% reduction in system blocking
+## Emphasis Bullets
 
-### Transformer Inference Optimization
-- Applied FP16 mixed precision
-- Reduced VRAM pressure
-- Stabilized throughput under concurrent requests
+- Separated inference workers from streaming/service components using microservice-based compute isolation (MSA).
+- Controlled GPU contention through worker separation and execution-path isolation under concurrent request load.
+- Applied hardware-aware runtime tuning (including mixed-precision usage) to reduce VRAM pressure during sustained traffic.
+- Framed optimization decisions around blocking behavior and throughput stability, not only single-request latency.
 
-### Scalability
-- Designed worker-based horizontal scaling
-- Structured for future hardware accelerator integration
+## Quantified Impact
 
-Built not as a media tool, but as a hardware-efficient distributed AI execution system.
+- Blocking reduction under concurrency: approximately 35% after compute isolation and worker separation.
+
+## Silicon-Validation Alignment
+
+This work maps to silicon-oriented validation because it exposes how scheduling and shared-resource contention affect delivered throughput.
+It demonstrates practical runtime control strategies for keeping accelerator resources stable under real multi-request conditions.

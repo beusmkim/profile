@@ -6,7 +6,7 @@ period: "2026"
 role: "Product Planner · Builder"
 stack: "Requirements, Data Modeling, Automation, (LLM assisted)"
 image: /assets/img/projects/cafe-automation.jpg
-order: 55
+order: 1000
 featured: false
 ---
 

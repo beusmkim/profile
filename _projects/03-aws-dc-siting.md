@@ -11,6 +11,7 @@ links:
     url: "https://github.com/username/REPO"
 order: 80
 featured: true
+published: false
 ---
 ## Problem
 데이터센터 입지 선정은 전력(재생에너지)·냉각(기온/습도)·통신(접근성) 등 복합 조건을 동시에 고려해야 합니다.  
