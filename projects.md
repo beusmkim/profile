@@ -15,8 +15,8 @@ permalink: /projects
       <div class="project-thumb placeholder">No image</div>
     {% endif %}
     <div>
-      <div class="project-title">{{ p.title }}</div>
-      <div class="kpi">{{ p.summary }}</div>
+      <div class="project-title">{{ p.title_en | default: p.title }}</div>
+      <div class="kpi">{{ p.summary_en | default: p.summary }}</div>
       <div class="kpi">Stack: {{ p.stack }}</div>
     </div>
   </a>

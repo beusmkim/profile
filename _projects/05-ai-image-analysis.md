@@ -3,6 +3,7 @@
 layout: project
 title: "AI Image Analysis – GPU-Constrained Optimization"
 image: /assets/img/projects/image-analysis-placeholder.jpg
+published: false
 ---
 
 ## Overview

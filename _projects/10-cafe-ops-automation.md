@@ -2,6 +2,8 @@
 layout: project
 title: 카페 운영 자동화 — 원가/재고/매출 관리의 통합
 summary: "엑셀 수작업 운영을 자동화하는 프로그램을 설계·구현해 일일 업무를 30분 → 5분 이내로 단축"
+title_en: "Cafe Operations Automation for Cost/Inventory/Sales"
+summary_en: "Designed and implemented automation to replace manual spreadsheet operations, reducing daily work from 30 minutes to under 5 minutes."
 period: "2026"
 role: "Product Planner · Builder"
 stack: "Requirements, Data Modeling, Automation, (LLM assisted)"

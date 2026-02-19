@@ -2,6 +2,8 @@
 layout: project
 title: VQA(Visual Question Answering) — 성능 정체를 넘기기 위한 룰 기반 보정
 summary: "Qwen 2.5-7B 학습 후 92% 정체 구간에서, 룰 기반 점수/다중 예측 보정으로 96.7%까지 개선"
+title_en: "VQA Rule-based Calibration Beyond Performance Plateau"
+summary_en: "After Qwen 2.5-7B plateaued around 92%, improved to 96.7% with rule-based scoring and multi-pass prediction calibration."
 period: "2026"
 role: "AI Engineer"
 stack: "Data Augmentation, Fine-tuning, Inference Strategy"

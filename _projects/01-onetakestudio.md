@@ -3,6 +3,7 @@
 layout: project
 title: "OneTakeStudio – Hardware-Aware AI Inference System"
 image: /assets/img/projects/onetakestudio_mainpage.png
+published: false
 ---
 
 ## Overview

@@ -2,6 +2,8 @@
 layout: project
 title: 이통사 고객 LTV 모델 개선 & 이탈 예측
 summary: "ARPU 중심 접근의 한계를 보완해 다중변수 기반 LTV 모델을 설계하고, 이탈 위험군 분류 및 전환 전략을 제안"
+title_en: "Telecom Customer LTV Improvement and Churn Prediction"
+summary_en: "Built a multivariate LTV model beyond ARPU-only assumptions, classified churn risk groups, and proposed conversion actions."
 period: "2025–2026"
 role: "Data Analyst"
 stack: "Python, pandas, scikit-learn, Regression/Classification"

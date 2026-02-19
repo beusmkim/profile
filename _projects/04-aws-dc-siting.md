@@ -2,6 +2,8 @@
 layout: project
 title: "Satellite Data Distributed Pipeline for Data Center Siting"
 summary: "Distributed preprocessing pipeline using AWS Batch and S3 for scalable geospatial/time-series workload execution."
+title_ko: "위성 데이터 기반 분산 파이프라인 - 데이터센터 입지 분석"
+summary_ko: "AWS Batch + S3 기반 분산 전처리로 대규모 시계열/공간 데이터 처리 확장성 확보."
 period: "2026"
 role: "Infra/Data Pipeline"
 stack: "AWS Batch, S3, Python, Zarr/Xarray"

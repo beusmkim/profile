@@ -2,6 +2,8 @@
 layout: project
 title: "OneTakeStudio - Contention-Aware Distributed Inference Architecture"
 summary: "MSA-based compute isolation and worker separation to stabilize GPU throughput under concurrent inference load."
+title_ko: "OneTakeStudio - 경합 제어형 분산 추론 아키텍처"
+summary_ko: "MSA 기반 컴퓨트 격리와 워커 분리로 동시 추론 부하에서 GPU 처리량 안정화."
 stack: "MSA, CUDA-Aware Inference Runtime, Worker-Based Contention Control"
 image: /assets/img/projects/onetakestudio_mainpage.png
 ---

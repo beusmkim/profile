@@ -2,6 +2,8 @@
 layout: project
 title: AI 기반 CRM 서비스 제작 (SSAFY)
 summary: "고객 로그/구매 이력으로 세그먼트를 정의하고 전환 가능성을 예측, LLM로 메시지/스크립트 생성까지 연결"
+title_en: "AI-based CRM Service Development (SSAFY)"
+summary_en: "Defined segments from customer logs/purchase history, predicted conversion potential, and connected outputs to LLM-based scripts/messages."
 period: "2025–2026"
 role: "AI · Data"
 stack: "Python, pandas, (추천/분류 모델), LLM 활용"

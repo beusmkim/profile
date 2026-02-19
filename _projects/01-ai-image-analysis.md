@@ -2,6 +2,8 @@
 layout: project
 title: "AI Image Analysis - CUDA-Centric Inference Optimization"
 summary: "Runtime and memory optimization under GPU constraints using FP16, INT8 experiments, and stream-level execution tuning."
+title_ko: "AI 이미지 분석 - CUDA 중심 추론 최적화"
+summary_ko: "FP16, INT8 실험, 스트림 실행 튜닝으로 GPU 제약 환경의 런타임/메모리 효율을 개선."
 stack: "CUDA Runtime, FP16/INT8, Transformer Attention Analysis"
 image: /assets/img/projects/image-analysis-placeholder.jpg
 ---
