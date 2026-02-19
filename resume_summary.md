@@ -1,7 +1,7 @@
 
 # Resume Summary (AI Silicon Focus)
 
-## Beomsoo Kim
+## Beumsu Kim
 Hardware-Aware AI Systems Engineer
 
 ### Technical Focus

@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# 김범수  
+# Beumsu Kim  
 ### 하드웨어 인지형 AI 시스템 & CUDA 최적화
 
 GPU 메모리 효율, 추론 지연 감소, 실리콘 확장성을 고려한 AI 시스템을 설계합니다.

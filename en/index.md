@@ -3,7 +3,7 @@ layout: default
 title: Home (EN)
 ---
 
-# Beomsoo Kim  
+# Beumsu Kim  
 ### Hardware-Aware AI Systems & CUDA Optimization
 
 I design AI systems aligned with hardware constraints and silicon scalability.

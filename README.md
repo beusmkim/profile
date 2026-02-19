@@ -1,5 +1,5 @@
 
-# Beomsoo Kim – Hardware-Aware AI Systems Engineer
+# Beumsu Kim – Hardware-Aware AI Systems Engineer
 
 This portfolio highlights engineering work focused on:
 

@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Beomsoo Kim
+# Beumsu Kim
 ### Hardware-Aware AI Software for GPU-Constrained Execution
 
 I optimize AI runtime behavior under hardware constraints, with focus on memory efficiency, latency stability, and contention control.
