@@ -20,13 +20,26 @@
       {% include sidebar.html %}
 
       <main class="content">
+        {% assign en_path = "/" %}
+        {% assign ko_path = "/ko/" %}
+        {% if page.url contains "/ko/about" or page.url contains "/about" %}
+          {% assign en_path = "/about" %}
+          {% assign ko_path = "/ko/about" %}
+        {% elsif page.url == "/" or page.url == "/ko/" or page.url == "/ko/index.html" %}
+          {% assign en_path = "/" %}
+          {% assign ko_path = "/ko/" %}
+        {% else %}
+          {% assign en_path = page.url %}
+          {% assign ko_path = "/ko/" %}
+        {% endif %}
+
         <div class="top-lang-switch">
           {% if page.url contains '/ko/' %}
-            <a class="btn small active" href="{{ "/ko/" | relative_url }}">KO</a>
-            <a class="btn small" href="{{ "/" | relative_url }}">EN</a>
+            <a class="btn small active" href="{{ ko_path | relative_url }}" onclick="try{localStorage.setItem('portfolio_lang','ko');}catch(e){}">KO</a>
+            <a class="btn small" href="{{ en_path | relative_url }}" onclick="try{localStorage.setItem('portfolio_lang','en');}catch(e){}">EN</a>
           {% else %}
-            <a class="btn small" href="{{ "/ko/" | relative_url }}">KO</a>
-            <a class="btn small active" href="{{ "/" | relative_url }}">EN</a>
+            <a class="btn small" href="{{ ko_path | relative_url }}" onclick="try{localStorage.setItem('portfolio_lang','ko');}catch(e){}">KO</a>
+            <a class="btn small active" href="{{ en_path | relative_url }}" onclick="try{localStorage.setItem('portfolio_lang','en');}catch(e){}">EN</a>
           {% endif %}
         </div>
 
