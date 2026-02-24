@@ -516,6 +516,11 @@ a:hover{ text-decoration:underline; text-underline-offset:3px; }
   background:var(--surface2);
   padding:6px;
 }
+.prose img.long-vertical{
+  width: min(100%, 920px);
+  max-height: none;
+  object-fit: initial;
+}
 .prose video{
   width:min(100%, 820px);
   display:block;

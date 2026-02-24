@@ -78,4 +78,6 @@ can significantly improve system-level accuracy without additional compute cost.
 ## Screenshots
 ![VQA Main]({{ '/assets/img/projects/vqa0.png' | relative_url }})
 [vqa2 원본 보기]({{ '/assets/img/projects/vqa2.png' | relative_url }})
-![VQA Long Screenshot (vqa2)]({{ '/assets/img/projects/vqa2.png' | relative_url }})
+<a href="{{ '/assets/img/projects/vqa2.png' | relative_url }}" target="_blank" rel="noopener">
+  <img class="long-vertical" src="{{ '/assets/img/projects/vqa2.png' | relative_url }}" alt="VQA Long Screenshot (vqa2)" />
+</a>
