@@ -1,32 +1,33 @@
 ---
 layout: project
-title: "AI Image Analysis - CUDA-Centric Inference Optimization"
-summary: "Runtime and memory optimization under GPU constraints using FP16, INT8 experiments, and stream-level execution tuning."
-title_ko: "AI 이미지 분석 - CUDA 중심 추론 최적화"
-summary_ko: "FP16, INT8 실험, 스트림 실행 튜닝으로 GPU 제약 환경의 런타임/메모리 효율을 개선."
-stack: "CUDA Runtime, FP16/INT8, Transformer Attention Analysis"
+title: "AI Image Analysis – Hardware-Constrained Inference Optimization"
 image: /assets/img/projects/image-analysis-placeholder.jpg
 ---
 
-## Hardware Efficiency Focus
+## Overview
+This project focuses on optimizing transformer-based image analysis under constrained GPU environments.
 
-This project optimized inference execution for a GPU-constrained AI image analysis workload.
-The goal was to improve delivered performance by reducing VRAM pressure and runtime stalls, not by changing model architecture.
+## Technical Challenge
+Frequent VRAM spikes and unstable inference latency due to memory saturation in attention layers.
 
-## Emphasis Bullets
+## Optimization Strategy
 
-- Implemented asynchronous CUDA stream logic to overlap execution and reduce idle phases in the inference path.
-- Applied FP16 mixed precision to lower activation and tensor memory footprint in memory-sensitive execution phases.
-- Ran INT8 quantization experiments to measure latency gains against precision-side trade-offs.
-- Analyzed transformer attention memory footprint to locate memory-heavy paths and prioritize optimization targets.
-- Used memory-bound vs compute-bound reasoning to decide where optimization effort produced measurable benefit.
+### 1. Mixed Precision Deployment
+- Converted FP32 to FP16
+- Achieved ~38–40% peak VRAM reduction
+- Reduced memory bandwidth pressure
 
-## Quantified Impact
+### 2. Quantization Exploration
+- Compared FP16 vs INT8 trade-offs
+- Reduced end-to-end inference latency by ~22%
+- Maintained acceptable accuracy
 
-- Peak VRAM reduction: approximately 38-40% with FP16 mixed precision.
-- Inference latency improvement: approximately 22% in INT8 experiment settings.
+### 3. CUDA-Level Improvements
+- Implemented asynchronous CUDA streams
+- Reduced unnecessary GPU↔CPU tensor transfers
+- Minimized memory fragmentation
 
-## Silicon-Validation Alignment
+## Key Insight
+Performance bottlenecks were primarily memory-bandwidth bound rather than compute-bound, particularly in attention mechanisms.
 
-This work is aligned with silicon validation concerns because it characterizes real runtime bottlenecks at the software execution layer:
-memory footprint, data movement, and utilization behavior under constrained GPU resources.
+This project demonstrates model-level performance reasoning aligned with AI silicon validation workflows.
