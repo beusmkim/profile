@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "AI Image Analysis – Hardware-Constrained Inference Optimization"
-image: /assets/img/projects/image-analysis-placeholder.jpg
+image: /assets/img/projects/aiimage0.png
 ---
 
 ## Overview
@@ -31,3 +31,8 @@ Frequent VRAM spikes and unstable inference latency due to memory saturation in 
 Performance bottlenecks were primarily memory-bandwidth bound rather than compute-bound, particularly in attention mechanisms.
 
 This project demonstrates model-level performance reasoning aligned with AI silicon validation workflows.
+
+## Screenshots
+![AI Image 0]({{ '/assets/img/projects/aiimage0.png' | relative_url }})
+![AI Image 2]({{ '/assets/img/projects/aiimage2.png' | relative_url }})
+![AI Image 3]({{ '/assets/img/projects/aiimage3.png' | relative_url }})
