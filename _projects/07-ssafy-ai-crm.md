@@ -37,3 +37,10 @@ Rather than stopping at descriptive analysis, the pipeline linked segmentation, 
 ## Limitation and Next Step
 - Current version is project-scale and should be extended with live operational feedback loops.
 - Next step is continuous calibration of segment and propensity outputs using real campaign outcomes.
+
+## Screenshots
+![CRM Main Page]({{ '/assets/img/projects/crm_mainpage.png' | relative_url }})
+![CRM Customer Detail]({{ '/assets/img/projects/crm_customer_detail.png' | relative_url }})
+![CRM Recommended]({{ '/assets/img/projects/crm_recommended.png' | relative_url }})
+![CRM Recommended Scripts]({{ '/assets/img/projects/crm_recommended_scripts.png' | relative_url }})
+![CRM Session Detail]({{ '/assets/img/projects/crm_session_detail.png' | relative_url }})

@@ -37,3 +37,12 @@ The engineering target was reliable throughput under increasing data volume thro
 
 Large-scale validation workflows depend on reliable data preparation pipelines.
 This project supports that need by establishing distributed, repeatable preprocessing that can feed hardware-aware model evaluation at scale.
+
+## Screenshots
+
+![Tamna-eye Main Page]({{ '/assets/img/projects/Tamna-eye_mainpage.png' | relative_url }})
+![Tamna-eye Solution]({{ '/assets/img/projects/Tamna-eye_solution.png' | relative_url }})
+![Tamna-eye Presentation]({{ '/assets/img/projects/Tamna-eye_presentation.PNG' | relative_url }})
+![Tamna-eye Jeju Global Space Forum]({{ '/assets/img/projects/Tamna-eye_Jeju global space_forum.jpeg' | relative_url }})
+![Tamna-eye Team Photo]({{ '/assets/img/projects/Tamna-eye_단체샷.JPG' | relative_url }})
+![Tamna-eye Extra]({{ '/assets/img/projects/Tamna-eye_┤?├??ª.JPG' | relative_url }})

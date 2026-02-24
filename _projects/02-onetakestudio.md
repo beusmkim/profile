@@ -21,3 +21,8 @@ A distributed AI inference system designed to isolate compute-heavy workloads an
 
 ## Engineering Value
 Emphasizes runtime stability, GPU resource orchestration, and inference scalability rather than product features.
+
+## Screenshots
+![OneTakeStudio Main Page]({{ '/assets/img/projects/onetakestudio_mainpage.png' | relative_url }})
+![OneTakeStudio Generate Shorts]({{ '/assets/img/projects/onetakestudio_generate_shorts.png' | relative_url }})
+![OneTakeStudio Shorts Output]({{ '/assets/img/projects/onetakestudio_shorts_output.png' | relative_url }})
