@@ -7,7 +7,7 @@ summary_en: "After Qwen 2.5-7B plateaued around 92%, improved to 96.7% with rule
 period: "2026"
 role: "AI Engineer"
 stack: "Data Augmentation, Fine-tuning, Inference Strategy"
-image: /assets/img/projects/vqa-qwen.jpg
+image: /assets/img/projects/vqa0.png
 order: 45
 featured: true
 links:
