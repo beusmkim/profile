@@ -9,7 +9,46 @@ permalink: /projects
 
 <div class="grid">
   {% for project in site.projects_en %}
-    {% if project.path contains '01-ai-image-analysis' or project.path contains '02-onetakestudio' or project.path contains '03-aws-dc-siting' %}
+    {% if project.path contains '01-ai-image-analysis' %}
+    <a class="project-tile" href="{{ project.url | relative_url }}">
+      <div class="project-thumb">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
+      </div>
+      <div>
+        <div class="project-title">{{ project.title }}</div>
+        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
+      </div>
+    </a>
+    {% endif %}
+  {% endfor %}
+  {% for project in site.projects_en %}
+    {% if project.path contains '11-SHPB' %}
+    <a class="project-tile" href="{{ project.url | relative_url }}">
+      <div class="project-thumb">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
+      </div>
+      <div>
+        <div class="project-title">{{ project.title }}</div>
+        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
+      </div>
+    </a>
+    {% endif %}
+  {% endfor %}
+  {% for project in site.projects_en %}
+    {% if project.path contains '02-onetakestudio' %}
+    <a class="project-tile" href="{{ project.url | relative_url }}">
+      <div class="project-thumb">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
+      </div>
+      <div>
+        <div class="project-title">{{ project.title }}</div>
+        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
+      </div>
+    </a>
+    {% endif %}
+  {% endfor %}
+  {% for project in site.projects_en %}
+    {% if project.path contains '03-aws-dc-siting' %}
     <a class="project-tile" href="{{ project.url | relative_url }}">
       <div class="project-thumb">
         <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>

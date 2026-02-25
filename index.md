@@ -4,25 +4,60 @@ title: Home
 ---
 
 # Beumsu Kim
-### Hardware-Aware AI Systems Engineer (CUDA · FP16/INT8 · Memory/Latency)
+### AI Systems Engineer — Hardware-Constrained Inference & Runtime Optimization
 
-I focus on aligning AI model execution with hardware constraints—memory bandwidth, VRAM footprint, and runtime behavior—so systems remain stable and efficient under real workload pressure.
+I design AI systems by diagnosing execution bottlenecks under real hardware constraints.  
+My work focuses on identifying whether performance ceilings are compute-bound or memory-bandwidth bound, and restructuring inference paths accordingly.
 
-## What I optimize
-- Memory-bound transformer execution (attention-heavy workloads)
-- Precision and deployment trade-offs (FP16, INT8)
-- GPU utilization and latency stability under concurrency
-- Inference system architecture (compute isolation, distributed workers)
+Rather than increasing model size, I optimize precision, tensor lifecycle, and system architecture to produce measurable runtime gains.
 
-## Featured work (most relevant to AI silicon / runtime optimization)
-- **AI Image Analysis — Memory-Bound Inference Optimization**  
-  FP16 reduced peak VRAM by ~38–40%, INT8 exploration improved latency by ~22%, and CUDA-level changes improved stability under constrained GPUs.  
-  [**View project →**]({{ "/projects/01-ai-image-analysis" | relative_url }})
+---
 
-- **OneTakeStudio — Compute-Isolated AI Inference System**  
-  Separated streaming and inference workers to reduce contention and improved blocking behavior by ~35% under concurrent workloads.  
-  [**View project →**]({{ "/projects/02-onetakestudio" | relative_url }})
+## Core Competencies
 
-- **Satellite Data Center Siting — Distributed Geospatial Compute**  
-  Tile-based partitioning + AWS Batch/S3 pipeline for large ERA5 datasets, designed for memory-safe horizontal scaling.  
-  [**View project →**]({{ "/projects/03-aws-dc-siting" | relative_url }})
+- Memory-bandwidth bound transformer diagnosis (attention-heavy workloads)
+- Mixed precision and quantization trade-off analysis (FP16 / INT8)
+- CUDA-aware execution reasoning and concurrency stabilization
+- Compute isolation architecture for latency-sensitive systems
+- Partitioned large-scale compute design (bounded memory execution)
+
+---
+
+## Representative Work (AI Silicon / Runtime Focus)
+
+### AI Image Analysis — Memory-Bound Inference Optimization  
+Diagnosed attention-heavy inference on NVIDIA A100 as bandwidth-bound via profiling and roofline reasoning.  
+Reduced peak VRAM by ~38–40% and improved end-to-end latency by ~22% without increasing model capacity.  
+[**View project →**]({{ "/projects/01-ai-image-analysis" | relative_url }})
+
+---
+
+### SHPB Calibration — Experimental Calibration & Model Validation  
+Characterized high-strain-rate material behavior through Split Hopkinson Pressure Bar experiments.  
+Calibrated constitutive parameters against measured stress-strain curves and improved simulation fidelity under dynamic loading.  
+[**View project →**]({{ "/projects/11-shpb" | relative_url }})
+
+---
+
+### OneTakeStudio — Compute-Isolated AI Inference System  
+Redesigned architecture to decouple latency-sensitive streaming from GPU-bound inference workers.  
+Reduced blocking under concurrency by ~35% and stabilized latency variance.  
+[**View project →**]({{ "/projects/02-onetakestudio" | relative_url }})
+
+---
+
+### Satellite Data Center Siting — Partitioned Large-Scale Compute  
+Built tile-based distributed pipeline for ERA5 datasets using AWS Batch + S3.  
+Bounded per-task memory and improved iteration speed through modular recomputation design.  
+[**View project →**]({{ "/projects/03-aws-dc-siting" | relative_url }})
+
+---
+
+## Engineering Philosophy
+
+Performance ceilings are determined by constraint awareness.
+
+I prioritize:
+- Measurement before optimization
+- Architectural isolation before micro-optimization
+- Hardware-aligned execution over brute-force scaling

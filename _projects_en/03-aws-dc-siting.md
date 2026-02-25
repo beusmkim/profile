@@ -1,49 +1,68 @@
 ---
 layout: project
-title: "Satellite Data Center Siting — Distributed Geospatial Compute"
-image: /assets/img/projects/Tamna-eye_mainpage.png
+title: "Satellite Data Center Siting — Partitioned Large-Scale Compute Design"
+image: /assets/img/projects/dc-siting-placeholder.jpg
 ---
 
 ## Overview
-A distributed processing pipeline for large geospatial datasets (ERA5) to score candidate locations for data center siting. The focus was memory-safe processing and scalable execution rather than a single optimization algorithm.
+
+A distributed geospatial computation pipeline for evaluating data center site suitability using ERA5 satellite datasets.
+
+The focus was scalable partitioned execution and memory-safe processing under large dataset constraints.
+
+---
 
 ## Problem
-ERA5 datasets (zarr) are large and not suitable for naive in-memory processing:
-- Single-machine runs were slow and memory-heavy
-- Loading broad geographic ranges increased memory footprint
-- Iteration speed was limited by I/O and aggregation bottlenecks
+
+ERA5 datasets (zarr format) are large and not suitable for naive in-memory processing.
+
+Observed issues:
+
+- High memory footprint during wide-region aggregation
+- Slow iteration cycles due to monolithic processing
+- Memory spikes during intermediate tensor creation
+
+---
 
 ## Diagnosis
-The bottleneck was dominated by **data volume and memory behavior**:
-- Geospatial aggregation created large intermediate arrays
-- Broad bounding boxes inflated I/O and compute cost
-- Lack of partitioning led to uneven workloads and memory spikes
+
+Performance was dominated by data movement and intermediate aggregation size.
+
+The bottleneck was not computational complexity, but partitioning strategy and dataflow design.
+
+---
 
 ## Approach
-### Tile-based partitioning
-- Split data into tiles to bound memory usage per task
-- Enabled incremental aggregation and caching
 
-### Distributed execution (AWS Batch + S3)
-- Executed tiles in parallel with job-based orchestration
-- Stored intermediate outputs in S3 for reproducibility and reprocessing
+### Tile-Based Partitioning
 
-### Scoring abstraction
-- Designed node-level scoring so features can be added without reworking the pipeline
-- Kept pipeline modular for future accelerator-backed workloads
+- Divided geospatial data into bounded tiles
+- Constrained per-task memory usage
+- Enabled incremental aggregation
+
+### Distributed Execution
+
+- Used AWS Batch for parallel task execution
+- Stored intermediate artifacts in S3
+- Designed recomputation boundaries for modular iteration
+
+### Abstraction Layer
+
+- Built node-level scoring abstraction
+- Enabled future feature expansion without architectural changes
+
+---
 
 ## Result
-- Scalable execution model: parallelizable tasks with bounded memory per tile
-- Improved iteration speed via modular recomputation and S3-backed intermediates
-- A foundation suitable for extending into larger regions or additional features
 
-## Screenshots
-![Tamna Main Page]({{ '/assets/img/projects/Tamna-eye_mainpage.png' | relative_url }})
-![Tamna Solution]({{ '/assets/img/projects/Tamna-eye_solution.png' | relative_url }})
-![Tamna Presentation]({{ '/assets/img/projects/Tamna-eye_presentation.PNG' | relative_url }})
-![Tamna Jeju Space Forum]({{ '/assets/img/projects/Tamna-eye_Jeju global space_forum.jpeg' | relative_url }})
-![Tamna Group Photo]({{ '/assets/img/projects/Tamna-eye_단체샷.JPG' | relative_url }})
-![Tamna Extra]({{ '/assets/img/projects/Tamna-eye_┤?├??ª.JPG' | relative_url }})
+- Horizontally scalable processing pipeline
+- Bounded memory per task
+- Improved iteration speed via modular recomputation
 
-## Key insight
-For large-scale geospatial workloads, performance is often a function of partitioning and dataflow design. Correctly bounding memory per task and decoupling compute from storage creates stable scalability without requiring complex optimization algorithms.
+---
+
+## Insight
+
+For large-scale workloads, partitioning and dataflow architecture define scalability ceilings more than raw compute.
+
+Bounding memory per execution unit creates predictable performance behavior.

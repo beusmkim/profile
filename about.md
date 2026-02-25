@@ -5,45 +5,66 @@ title: About
 
 # About
 
-I am an AI Systems Engineer focused on hardware-aware model execution and runtime optimization. My work prioritizes measurable performance improvements under hardware constraints, especially where transformer workloads become memory-bandwidth limited.
+I am an AI Systems Engineer specializing in hardware-constrained inference optimization.
 
-## Technical profile
-I work at the boundary between models and execution:
+My work focuses on diagnosing execution bottlenecks under real GPU environments and restructuring inference paths based on measurable constraints such as memory bandwidth, VRAM allocation behavior, and concurrency pressure.
 
-- Diagnose performance ceilings (memory-bound vs compute-bound behavior)
-- Reduce VRAM footprint and bandwidth pressure (precision strategies, allocation patterns)
-- Improve latency stability under concurrency (asynchronous execution, isolation)
-- Design inference systems that scale without contention (workers, orchestration, distributed pipelines)
+Rather than scaling models, I prioritize execution-level reasoning.
 
-## Technical stack
+---
 
-### AI model execution
+## Core Capabilities
+
+I operate at the boundary between model design and hardware execution:
+
+- Identify performance ceilings (memory-bound vs compute-bound)
+- Characterize transformer attention workloads under bandwidth pressure
+- Optimize precision strategies (FP16, INT8) with deployment-aware trade-offs
+- Stabilize latency under concurrent inference
+- Architect compute isolation for real-time AI systems
+- Design partitioned execution pipelines for large-scale workloads
+
+---
+
+## Technical Stack (Capability-Oriented)
+
+### AI Execution & Profiling
 - PyTorch inference pipelines
-- Transformer workload analysis (attention memory footprint)
+- torch.profiler for kernel-level timing
+- Transformer attention memory footprint analysis
+- Roofline reasoning (arithmetic intensity vs bandwidth behavior)
+
+### Precision & Runtime Optimization
 - Mixed precision deployment (FP16)
-- Quantization experiments (INT8) and accuracy/performance trade-offs
+- Quantization experimentation (INT8)
+- Tensor lifecycle optimization
+- CPU↔GPU transfer minimization
+- Concurrency-aware execution restructuring
 
-### GPU / runtime optimization
-- CUDA-aware execution (streams / asynchronous execution concepts)
-- VRAM footprint control and fragmentation mitigation
-- Minimizing CPU↔GPU transfers and redundant tensor copies
-- Interpreting latency and throughput under realistic concurrency
+### System Architecture
+- Microservice-based compute isolation (MSA)
+- Worker orchestration for resource arbitration
+- Latency-sensitive path separation
+- Scalable distributed execution (AWS Batch, S3)
 
-### Systems and scalability
-- Microservice-based compute isolation (MSA) to prevent resource contention
-- Worker-based orchestration for throughput stability
-- AWS Batch + S3 distributed processing for large datasets
-- Tile-based partitioning for memory-safe geospatial workloads
+---
 
-### Inference strategy engineering
-- Multi-pass inference orchestration
-- Consistency-based scoring and correction logic
-- Post-processing as a system-level lever when training improvements plateau
+## Representative Evidence
 
-## Evidence
 - Peak VRAM reduction: ~38–40% via FP16 deployment
-- Inference latency improvement: ~22% via precision/quantization strategy exploration
-- Blocking reduction under concurrency: ~35% via compute isolation architecture
+- Inference latency improvement: ~22% through precision and execution restructuring
+- Blocking reduction: ~35% via compute isolation architecture
+- Accuracy improvement (92% → 96.7%) via inference-stage variance reduction
 
-## Direction
-My direction is to contribute to teams that care about model-level validation, runtime efficiency, and silicon-aligned performance reasoning—where real gains come from understanding execution, not just training.
+---
+
+## Engineering Philosophy
+
+Performance ceilings are defined by constraints, not ambition.
+
+I prioritize:
+- Measurement before optimization
+- Architectural isolation before micro-tuning
+- Hardware-aligned execution over brute-force scaling
+
+My direction is to contribute to teams focused on AI silicon validation, runtime efficiency, and hardware-software integration.

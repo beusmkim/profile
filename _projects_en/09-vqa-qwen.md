@@ -1,40 +1,94 @@
 ---
 layout: project
-title: "VQA System — Inference-Orchestrated Accuracy Optimization"
-image: /assets/img/projects/vqa0.png
+title: "VQA System — Inference-Orchestrated Variance Reduction"
+image: /assets/img/projects/vqa-qwen.jpg
 ---
 
 ## Overview
-A visual question answering system built on a Qwen 2.5-7B based pipeline. This project is included as a lower-priority case study to demonstrate inference-stage strategy design when training improvements plateau.
+
+A Visual Question Answering system built on Qwen 2.5-7B, redesigned to improve reliability when training improvements plateaued.
+
+Instead of increasing model size or retraining complexity, the focus shifted to inference-stage variance control.
+
+---
 
 ## Problem
-Data augmentation and hyperparameter tuning pushed accuracy to 92%, but improvements stalled:
-- Additional tuning produced diminishing returns
-- Training-only iterations increased cost without meaningful gains
-- The remaining error modes required inference-stage handling
+
+After data augmentation and hyperparameter tuning, validation accuracy plateaued at 92%.
+
+Observed issues:
+
+- High variability in predictions for ambiguous inputs
+- Stochastic instability across repeated inference calls
+- Training iterations increased compute cost without significant gains
+
+The bottleneck was not model capacity, but prediction consistency.
+
+---
+
+## Measurement Context
+
+- Single-GPU inference evaluation
+- Multiple repeated inference runs per input
+- Accuracy measured across ambiguous validation samples
+
+Observed:
+- Output instability across identical inputs
+- Confidence variance between candidate answers
+- Performance degradation in edge-case reasoning
+
+---
 
 ## Diagnosis
-The plateau was driven by **prediction inconsistency** rather than model capacity:
-- The same input produced multiple plausible candidates
-- Errors clustered around ambiguous cases where a single pass was brittle
-- Improving accuracy required system-level correction logic
+
+The model exhibited stochastic variance in uncertain regions.
+
+This suggested that:
+
+- Single-pass inference was brittle
+- Variance reduction could improve reliability
+- Inference orchestration could outperform additional training
+
+---
 
 ## Approach
-### Multi-pass inference
-- Performed repeated predictions for the same image-question pair
-- Collected candidate answers across multiple runs
 
-### Consistency-based scoring and correction
-- Introduced a rule-based scoring layer to rank candidates
-- Reinforced outputs with higher agreement and stable confidence
-- Applied correction logic to improve consistency
+### Multi-Pass Inference
+
+- Executed repeated inference per image-question pair
+- Collected multiple candidate outputs
+
+### Consistency-Based Scoring
+
+- Ranked candidates based on agreement and confidence stability
+- Penalized outlier predictions
+- Reinforced consensus-driven outputs
+
+### Structured Post-Processing
+
+- Introduced deterministic correction logic
+- Reduced output variance across runs
+
+---
 
 ## Result
-Accuracy improved from **92% → 96.7%** without increasing model size.
 
-## Screenshots
-![VQA 0]({{ '/assets/img/projects/vqa0.png' | relative_url }})
-![VQA 2]({{ '/assets/img/projects/vqa2.png' | relative_url }})
+- Accuracy improved from 92% → 96.7%
+- Reduced prediction instability in ambiguous cases
+- Improved reliability without increasing model size
 
-## Key insight
-When training gains plateau, system-level inference strategy can be an effective lever. Multi-pass inference with consistency scoring improves reliability by turning stochastic variability into a signal.
+---
+
+## Limitations
+
+- Increased inference time due to repeated passes
+- Not suitable for strict real-time systems
+- Further improvements may require ensemble or calibration tuning
+
+---
+
+## Key Insight
+
+When training improvements plateau, inference variance becomes a dominant factor.
+
+Treating inference as a stochastic process and reducing output variance through orchestration can significantly improve system-level reliability without modifying model weights.

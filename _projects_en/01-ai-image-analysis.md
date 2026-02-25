@@ -5,43 +5,98 @@ image: /assets/img/projects/aiimage0.png
 ---
 
 ## Overview
-This project focuses on improving inference stability and efficiency for transformer-based image analysis under constrained GPU resources. The goal was not to increase model size, but to reduce VRAM pressure and mitigate bandwidth-driven latency spikes.
+
+This project investigates inference instability in transformer-based image analysis under constrained GPU environments.  
+The goal was not to increase model capacity, but to diagnose and mitigate runtime bottlenecks affecting VRAM usage and latency stability.
+
+---
 
 ## Problem
-Data augmentation and hyperparameter tuning improved model quality up to a point, but deployment performance remained unstable:
-- Peak VRAM spikes caused occasional out-of-memory failures
-- Latency variance increased under concurrency
-- Additional training did not address runtime bottlenecks
+
+After accuracy improvements through data augmentation and hyperparameter tuning, deployment performance remained unstable:
+
+- Peak VRAM spikes triggered intermittent OOM failures  
+- Latency variance increased under concurrent inference  
+- Further training iterations did not improve runtime behavior  
+
+The bottleneck was execution-level, not model-level.
+
+---
+
+## Measurement Context
+
+Environment:
+- GPU: NVIDIA A100 (Google Cloud)
+- Batch size: 1–5 (dynamic adjustment)
+- Concurrent inference calls
+
+Profiling tools:
+- torch.profiler (kernel-level timing and memory trace)
+- nvidia-smi for runtime VRAM tracking
+- Roofline reasoning for memory vs compute characterization
+
+---
 
 ## Diagnosis
-Profiling and symptom-driven investigation suggested the workload was **memory-bandwidth bound**, especially around attention-heavy execution:
-- High Q/K/V tensor movement increased global memory pressure
-- Latency rose before compute utilization saturated
-- Memory allocation patterns contributed to fragmentation and VRAM spikes
+
+Profiling revealed:
+
+- SM utilization remained below theoretical compute peak
+- DRAM bandwidth usage spiked during attention-heavy layers
+- Q/K/V tensor movement dominated memory traffic
+- Intermediate tensor allocation aligned with VRAM spikes
+
+Roofline interpretation indicated low arithmetic intensity relative to memory traffic, confirming the workload was memory-bandwidth bound rather than compute-bound.
+
+---
+
+## Hypothesis
+
+If bandwidth and allocation behavior dominate:
+
+- Reducing tensor footprint should reduce DRAM pressure
+- Lower precision may improve bandwidth efficiency
+- Tensor lifecycle control may stabilize VRAM spikes
+
+---
 
 ## Approach
-### Mixed precision deployment (FP16)
-- Converted FP32 inference path to FP16 where safe
-- Reduced activation and tensor footprint to lower bandwidth pressure
 
-### Quantization exploration (INT8)
-- Compared FP16 vs INT8 trade-offs on representative inputs
-- Prioritized latency improvement while monitoring output quality stability
+### Mixed Precision Deployment (FP16)
+- Converted FP32 inference path to FP16 in numerically stable regions
+- Reduced activation footprint and memory traffic
 
-### CUDA-aware runtime improvements
+### Quantization Exploration (INT8)
+- Benchmarked FP16 vs INT8
+- Evaluated latency gain vs output stability
+- Selected deployment-safe precision configuration
+
+### CUDA-Aware Execution Improvements
 - Applied asynchronous execution concepts (CUDA streams)
-- Reduced unnecessary CPU↔GPU tensor transfers and redundant copies
-- Mitigated fragmentation by improving allocation and reuse patterns
+- Reduced redundant CPU↔GPU transfers
+- Improved tensor reuse to mitigate fragmentation
+- Structured execution path to reduce blocking under concurrency
+
+---
 
 ## Result
-- Peak VRAM reduction: **~38–40%** (FP16 deployment)
-- Inference latency improvement: **~22%** (precision/quantization strategy exploration)
-- Improved stability under constrained GPUs (reduced OOM incidence and latency variance)
 
-## Screenshots
-![AI Image Analysis 0]({{ '/assets/img/projects/aiimage0.png' | relative_url }})
-![AI Image Analysis 2]({{ '/assets/img/projects/aiimage2.png' | relative_url }})
-![AI Image Analysis 3]({{ '/assets/img/projects/aiimage3.png' | relative_url }})
+- Peak VRAM reduced by ~38–40%
+- End-to-end inference latency improved by ~22%
+- Latency variance reduced under concurrency
+- OOM failures eliminated under tested A100 setup
 
-## Key insight
-For attention-heavy transformer workloads, runtime performance is frequently limited by **memory bandwidth and allocation behavior**, not pure compute. The most reliable gains came from aligning the execution path with hardware constraints (precision, transfers, allocation), rather than repeating training-only tuning.
+---
+
+## Limitations
+
+- Validated on single A100 environment
+- INT8 required calibration for stability
+- Further gains may require kernel-level fusion or C++ optimization
+
+---
+
+## Key Insight
+
+Attention-heavy transformer inference is often constrained by memory bandwidth and allocation behavior rather than raw compute throughput.  
+Sustainable performance gains emerged from aligning precision, tensor lifecycle, and execution patterns with hardware limitations.

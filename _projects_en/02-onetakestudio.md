@@ -5,42 +5,66 @@ image: /assets/img/projects/onetakestudio_mainpage.png
 ---
 
 ## Overview
-A real-time content pipeline where compute-heavy inference is isolated from the streaming layer to maintain latency stability. The core engineering focus was system architecture: preventing inference workloads from degrading real-time services.
+
+A real-time AI pipeline redesigned to isolate compute-heavy inference from latency-sensitive streaming.
+
+---
 
 ## Problem
-When inference and streaming ran in a tightly coupled path:
-- GPU contention and blocking increased under concurrent requests
-- Real-time streaming quality degraded during heavy inference
-- Scaling inference capacity risked destabilizing the interactive path
+
+Tightly coupled streaming and inference execution caused:
+
+- GPU contention under concurrent requests
+- Latency spikes propagating to streaming
+- Backpressure cascading across execution stages
+
+The issue was architectural, not algorithmic.
+
+---
+
+## Measurement Context
+
+- Concurrent inference requests
+- GPU utilization monitoring
+- Frame drop correlation analysis
+
+Observed:
+- GPU utilization peaks aligned with streaming FPS degradation
+- Blocking events correlated with inference bursts
+
+---
 
 ## Diagnosis
-The primary bottleneck was not a single model component, but **resource contention**:
-- Inference workloads competed with streaming tasks for CPU/GPU time
-- Blocking cascaded when one stage stalled (backpressure)
-- Lack of isolation made tuning or scaling fragile
+
+Resource contention between streaming I/O and inference workloads caused unstable latency.
+
+---
 
 ## Approach
-### Compute isolation architecture (MSA)
-- Separated streaming (WebRTC layer) from inference workers
-- Routed inference via worker orchestration to prevent contention
 
-### Hardware-aware inference path
-- Applied FP16 in inference workers to reduce VRAM pressure
-- Designed workers so GPU-intensive tasks do not block I/O and streaming
+### Compute Isolation (MSA)
+- Separated streaming and inference services
+- Introduced worker-based orchestration
+
+### Hardware-Aware Worker Design
+- Applied FP16 inside workers
+- Prevented GPU-bound tasks from blocking I/O threads
 
 ### Scalability
-- Enabled horizontal scaling by adding inference workers independently
-- Preserved streaming latency by design (isolation first, optimization second)
+- Enabled horizontal scaling of inference workers
+- Preserved streaming latency during scaling
+
+---
 
 ## Result
-- Blocking reduction under concurrency: **~35%**
-- Improved throughput stability without harming the streaming path
-- Cleaner profiling and optimization surface (workers can be tuned independently)
 
-## Screenshots
-![OneTakeStudio Main Page]({{ '/assets/img/projects/onetakestudio_mainpage.png' | relative_url }})
-![OneTakeStudio Generate Shorts]({{ '/assets/img/projects/onetakestudio_generate_shorts.png' | relative_url }})
-![OneTakeStudio Shorts Output]({{ '/assets/img/projects/onetakestudio_shorts_output.png' | relative_url }})
+- Blocking reduced by ~35%
+- Latency variance stabilized
+- Clear profiling boundary for further optimization
 
-## Key insight
-In real-time systems, architecture is a first-order performance lever. Compute isolation creates a stable baseline where model-level optimizations (precision, kernels) can produce reliable gains without causing regressions in latency-sensitive services.
+---
+
+## Insight
+
+In real-time AI systems, architecture determines performance ceilings.  
+Isolation of critical paths mirrors hardware-software co-design principles.
