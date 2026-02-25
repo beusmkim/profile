@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Satellite Data Center Siting — 분할 기반 대규모 연산 설계"
-image: /assets/img/projects/dc-siting-placeholder.jpg
+image: /assets/img/projects/Tamna-eye_mainpage.png
 category: hardware
 priority: 4
 ---

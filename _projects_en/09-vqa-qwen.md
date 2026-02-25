@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "VQA System — Inference-Orchestrated Variance Reduction"
-image: /assets/img/projects/vqa-qwen.jpg
+image: /assets/img/projects/vqa0.png
 category: ml
 priority: 2
 ---

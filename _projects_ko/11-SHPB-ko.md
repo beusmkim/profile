@@ -2,6 +2,7 @@
 layout: project
 title: "고변형률 재료 특성화 — 실험 기반 모델 보정 및 검증"
 image: /assets/img/projects/shpb.png
+permalink: /ko/projects/11-shpb-ko
 category: hardware
 priority: 2
 ---

@@ -2,6 +2,7 @@
 layout: project
 title: "High-Strain-Rate Material Characterization — Experimental Calibration & Model Validation"
 image: /assets/img/projects/shpb.png
+permalink: /projects/11-shpb
 category: hardware
 priority: 2
 ---
