@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "AI Image Analysis — Memory-Bound Inference Optimization"
-image: /assets/img/projects/image-analysis-placeholder.jpg
+image: /assets/img/projects/aiimage0.png
 ---
 
 ## Overview

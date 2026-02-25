@@ -40,7 +40,7 @@ I work at the boundary between models and execution:
 - Consistency-based scoring and correction logic
 - Post-processing as a system-level lever when training improvements plateau
 
-## Evidence (selected)
+## Evidence
 - Peak VRAM reduction: ~38–40% via FP16 deployment
 - Inference latency improvement: ~22% via precision/quantization strategy exploration
 - Blocking reduction under concurrency: ~35% via compute isolation architecture

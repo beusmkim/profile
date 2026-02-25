@@ -1,39 +1,7 @@
 ---
 layout: project
-title: "VQA System — Inference-Orchestrated Accuracy Optimization"
+title: "VQA 시스템 - 추론 오케스트레이션 기반 정확도 개선"
 image: /assets/img/projects/vqa0.png
----
-
-## Overview
-A visual question answering system built on a Qwen 2.5-7B based pipeline. This project is included as a lower-priority case study to demonstrate inference-stage strategy design when training improvements plateau.
-
-## Problem
-Data augmentation and hyperparameter tuning pushed accuracy to 92%, but improvements stalled:
-- Additional tuning produced diminishing returns
-- Training-only iterations increased cost without meaningful gains
-- The remaining error modes required inference-stage handling
-
-## Diagnosis
-The plateau was driven by **prediction inconsistency** rather than model capacity:
-- The same input produced multiple plausible candidates
-- Errors clustered around ambiguous cases where a single pass was brittle
-- Improving accuracy required system-level correction logic
-
-## Approach
-### Multi-pass inference
-- Performed repeated predictions for the same image-question pair
-- Collected candidate answers across multiple runs
-
-### Consistency-based scoring and correction
-- Introduced a rule-based scoring layer to rank candidates
-- Reinforced outputs with higher agreement and stable confidence
-- Applied correction logic to improve consistency
-
-## Result
-Accuracy improved from **92% → 96.7%** without increasing model size.
-
-## Key insight
-When training gains plateau, system-level inference strategy can be an effective lever. Multi-pass inference with consistency scoring improves reliability by turning stochastic variability into a signal.
 ---
 
 ## Overview
@@ -61,7 +29,7 @@ Qwen 2.5-7B 기반 VQA 파이프라인에서 학습 개선이 정체된 이후, 
 - 합의도가 높은 답안을 강화하고 불안정한 출력을 보정
 
 ## Result
-정확도 **92% → 96.7%**로 개선(모델 크기 증가 없이)
+정확도 **92% -> 96.7%**로 개선(모델 크기 증가 없이)
 
 ## Key insight
 학습 개선이 정체될 때 inference 전략은 강력한 레버가 될 수 있습니다. multi-pass 추론과 일관성 기반 스코어링은 확률적 변동성을 신호로 바꿔 신뢰도를 높입니다.
