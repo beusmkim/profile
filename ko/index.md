@@ -25,7 +25,7 @@ compute-bound인지 memory-bandwidth bound인지 구분한 뒤 실행 경로를 
 
 ---
 
-## 대표 프로젝트 (AI Silicon / Runtime 중심)
+## 대표 프로젝트
 
 ### AI Image Analysis — Memory-Bound 추론 최적화  
 NVIDIA A100 환경에서 attention-heavy 추론을 프로파일링 및 roofline 관점으로 분석하여 bandwidth-bound 특성을 확인.  

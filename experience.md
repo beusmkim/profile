@@ -5,7 +5,7 @@ subtitle: "Execution history — from constraint-based engineering to hardware-a
 permalink: /experience
 ---
 
-## Timeline (reverse chronological)
+## Timeline
 
 ### 2025.07 – 2026.06  
 ### Samsung Software AI Academy For Youth (SSAFY)  

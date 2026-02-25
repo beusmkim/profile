@@ -22,7 +22,7 @@ permalink: /projects
   {% endfor %}
 </div>
 
-## Applied ML Systems (Lower Priority)
+## Applied ML Systems
 
 <div class="grid">
   {% assign ml_projects = site.projects_en | where: "category", "ml" | sort: "priority" %}

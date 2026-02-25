@@ -23,7 +23,7 @@ Rather than increasing model size, I optimize precision, tensor lifecycle, and s
 
 ---
 
-## Representative Work (AI Silicon / Runtime Focus)
+## Representative Work
 
 ### AI Image Analysis — Memory-Bound Inference Optimization  
 Diagnosed attention-heavy inference on NVIDIA A100 as bandwidth-bound via profiling and roofline reasoning.  

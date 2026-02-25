@@ -27,7 +27,7 @@ permalink: /ko/about
 
 ---
 
-## Technical Stack (역량 중심 정리)
+## Technical Stack
 
 ### AI 실행 및 프로파일링
 - PyTorch 추론 파이프라인

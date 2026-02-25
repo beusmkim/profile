@@ -22,7 +22,7 @@ permalink: /ko/projects
   {% endfor %}
 </div>
 
-## 응용 ML 시스템 (보조 프로젝트)
+## 응용 ML 시스템
 
 <div class="grid">
   {% assign ml_projects = site.projects_ko | where: "category", "ml" | sort: "priority" %}

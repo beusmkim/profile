@@ -26,7 +26,7 @@ I operate at the boundary between model design and hardware execution:
 
 ---
 
-## Technical Stack (Capability-Oriented)
+## Technical Stack
 
 ### AI Execution & Profiling
 - PyTorch inference pipelines
