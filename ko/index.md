@@ -28,4 +28,3 @@ permalink: /ko/
   ERA5(zarr) 대용량 지리/기상 데이터를 타일 기반으로 분할하고 AWS Batch/S3로 수평 확장 가능한 파이프라인 구축.  
   [View project]({{ "/ko/projects/03-aws-dc-siting" | relative_url }})
 
-채용 관점에서 검토하신다면 첫 번째 프로젝트(AI Image Analysis)가 하드웨어 인지형 진단/개선 근거를 가장 직접적으로 담고 있습니다.

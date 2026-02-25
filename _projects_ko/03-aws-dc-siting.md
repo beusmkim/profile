@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Satellite Data Center Siting — Distributed Geospatial Compute"
-image: /assets/img/projects/dc-siting-placeholder.jpg
+image: /assets/img/projects/Tamna-eye_mainpage.png
 ---
 
 ## Overview

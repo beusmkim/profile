@@ -41,7 +41,7 @@ permalink: /ko/about
 - 일관성 기반 스코어링/보정 로직
 - 학습 개선 정체 시 후처리/추론 전략을 시스템 레버로 활용
 
-## 근거(일부)
+## 성과
 - FP16 적용으로 peak VRAM ~38–40% 감소
 - precision/quantization 탐색으로 latency ~22% 개선
 - compute isolation으로 동시 요청 blocking ~35% 감소
