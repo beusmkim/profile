@@ -7,6 +7,10 @@ category: hardware
 priority: 2
 ---
 
+<iframe src="{{ '/assets/high-strain-rate.pdf' | relative_url }}" width="100%" height="760" style="border: 1px solid #ddd; border-radius: 8px;" title="High-Strain-Rate PDF"></iframe>
+
+<p><a href="{{ '/assets/high-strain-rate.pdf' | relative_url }}" target="_blank" rel="noopener">PDF 새 탭에서 열기</a></p>
+
 ## Overview
 
 본 프로젝트는 Split Hopkinson Pressure Bar(SHPB) 실험을 통해 고변형률 환경에서의 재료 거동을 계측하고, 동적 하중 조건에 맞는 구성방정식을 보정하는 것을 목표로 했다.

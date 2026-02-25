@@ -7,6 +7,10 @@ category: hardware
 priority: 2
 ---
 
+<iframe src="{{ '/assets/high-strain-rate.pdf' | relative_url }}" width="100%" height="760" style="border: 1px solid #ddd; border-radius: 8px;" title="High-Strain-Rate PDF"></iframe>
+
+<p><a href="{{ '/assets/high-strain-rate.pdf' | relative_url }}" target="_blank" rel="noopener">Open PDF in new tab</a></p>
+
 ## Overview
 
 This project focused on characterizing high-strain-rate material behavior using Split Hopkinson Pressure Bar (SHPB) experiments and calibrating a constitutive model under dynamic loading conditions.
