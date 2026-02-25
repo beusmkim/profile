@@ -18,13 +18,12 @@ permalink: /ko/
 ## Featured work (AI silicon / runtime 최적화 관점 우선)
 - AI Image Analysis — Memory-Bound Inference Optimization  
   FP16로 peak VRAM ~38–40% 감소, INT8 탐색으로 latency ~22% 개선, CUDA 인지형 개선으로 제한된 GPU 환경에서 안정성 향상.  
-  [View project]({{ "/ko/projects/01-ai-image-analysis" | relative_url }})
+  [**View project →**]({{ "/ko/projects/01-ai-image-analysis" | relative_url }})
 
 - OneTakeStudio — Compute-Isolated AI Inference System  
   스트리밍 경로와 추론 워커를 분리하여 자원 경합을 줄이고 동시 요청 blocking ~35% 감소.  
-  [View project]({{ "/ko/projects/02-onetakestudio" | relative_url }})
+  [**View project →**]({{ "/ko/projects/02-onetakestudio" | relative_url }})
 
 - Satellite Data Center Siting — Distributed Geospatial Compute  
   ERA5(zarr) 대용량 지리/기상 데이터를 타일 기반으로 분할하고 AWS Batch/S3로 수평 확장 가능한 파이프라인 구축.  
-  [View project]({{ "/ko/projects/03-aws-dc-siting" | relative_url }})
-
+  [**View project →**]({{ "/ko/projects/03-aws-dc-siting" | relative_url }})

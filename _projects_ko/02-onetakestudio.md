@@ -37,5 +37,10 @@ image: /assets/img/projects/onetakestudio_mainpage.png
 - 스트리밍 경로의 지연 안정성이 개선
 - worker 단위로 profiling/최적화를 진행할 수 있는 구조 확보
 
+## 이미지
+![OneTakeStudio 메인]({{ '/assets/img/projects/onetakestudio_mainpage.png' | relative_url }})
+![OneTakeStudio 생성]({{ '/assets/img/projects/onetakestudio_generate_shorts.png' | relative_url }})
+![OneTakeStudio 출력]({{ '/assets/img/projects/onetakestudio_shorts_output.png' | relative_url }})
+
 ## Key insight
 실시간 시스템에서는 아키텍처가 1차 성능 레버입니다. compute isolation을 통해 안정적인 baseline을 만들면, precision/커널 최적화 같은 모델 수준 개선이 서비스 품질을 해치지 않고 누적될 수 있습니다.

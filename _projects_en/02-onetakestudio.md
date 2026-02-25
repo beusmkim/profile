@@ -37,5 +37,10 @@ The primary bottleneck was not a single model component, but **resource contenti
 - Improved throughput stability without harming the streaming path
 - Cleaner profiling and optimization surface (workers can be tuned independently)
 
+## Screenshots
+![OneTakeStudio Main Page]({{ '/assets/img/projects/onetakestudio_mainpage.png' | relative_url }})
+![OneTakeStudio Generate Shorts]({{ '/assets/img/projects/onetakestudio_generate_shorts.png' | relative_url }})
+![OneTakeStudio Shorts Output]({{ '/assets/img/projects/onetakestudio_shorts_output.png' | relative_url }})
+
 ## Key insight
 In real-time systems, architecture is a first-order performance lever. Compute isolation creates a stable baseline where model-level optimizations (precision, kernels) can produce reliable gains without causing regressions in latency-sensitive services.

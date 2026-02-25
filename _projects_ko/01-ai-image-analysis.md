@@ -38,5 +38,10 @@ image: /assets/img/projects/aiimage0.png
 - 추론 latency **~22% 개선** (precision/quantization 전략 탐색)
 - 제한된 GPU 환경에서 OOM 발생과 latency variance가 감소하며 안정성 향상
 
+## 이미지
+![AI 이미지 분석 0]({{ '/assets/img/projects/aiimage0.png' | relative_url }})
+![AI 이미지 분석 2]({{ '/assets/img/projects/aiimage2.png' | relative_url }})
+![AI 이미지 분석 3]({{ '/assets/img/projects/aiimage3.png' | relative_url }})
+
 ## Key insight
 attention-heavy transformer 워크로드는 compute보다 **메모리 대역폭과 할당 동작**에 의해 성능이 제한되는 경우가 많았습니다. 반복적인 학습 튜닝보다 실행 경로를 하드웨어 제약(precision, transfers, allocation)에 맞추는 것이 더 일관된 성능 개선으로 이어졌습니다.

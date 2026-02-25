@@ -37,5 +37,13 @@ The bottleneck was dominated by **data volume and memory behavior**:
 - Improved iteration speed via modular recomputation and S3-backed intermediates
 - A foundation suitable for extending into larger regions or additional features
 
+## Screenshots
+![Tamna Main Page]({{ '/assets/img/projects/Tamna-eye_mainpage.png' | relative_url }})
+![Tamna Solution]({{ '/assets/img/projects/Tamna-eye_solution.png' | relative_url }})
+![Tamna Presentation]({{ '/assets/img/projects/Tamna-eye_presentation.PNG' | relative_url }})
+![Tamna Jeju Space Forum]({{ '/assets/img/projects/Tamna-eye_Jeju global space_forum.jpeg' | relative_url }})
+![Tamna Group Photo]({{ '/assets/img/projects/Tamna-eye_단체샷.JPG' | relative_url }})
+![Tamna Extra]({{ '/assets/img/projects/Tamna-eye_┤?├??ª.JPG' | relative_url }})
+
 ## Key insight
 For large-scale geospatial workloads, performance is often a function of partitioning and dataflow design. Correctly bounding memory per task and decoupling compute from storage creates stable scalability without requiring complex optimization algorithms.

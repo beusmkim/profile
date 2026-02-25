@@ -31,5 +31,9 @@ Qwen 2.5-7B 기반 VQA 파이프라인에서 학습 개선이 정체된 이후, 
 ## Result
 정확도 **92% -> 96.7%**로 개선(모델 크기 증가 없이)
 
+## 이미지
+![VQA 0]({{ '/assets/img/projects/vqa0.png' | relative_url }})
+![VQA 2]({{ '/assets/img/projects/vqa2.png' | relative_url }})
+
 ## Key insight
 학습 개선이 정체될 때 inference 전략은 강력한 레버가 될 수 있습니다. multi-pass 추론과 일관성 기반 스코어링은 확률적 변동성을 신호로 바꿔 신뢰도를 높입니다.

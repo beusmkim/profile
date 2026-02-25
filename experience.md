@@ -8,7 +8,7 @@ permalink: /experience
 ## Summary
 My experience combines customer operations, applied AI projects, and system-level performance reasoning. I prioritize clear problem framing, measurable outcomes, and architecture-first improvements under real constraints (latency, memory, concurrency).
 
-## Timeline (chronological)
+## Timeline
 
 ### Samsung Software AI Academy For Youth (SSAFY)
 **Role:** Project-based engineer (AI systems / applied ML)  

@@ -15,7 +15,7 @@ I work at the boundary between models and execution:
 - Improve latency stability under concurrency (asynchronous execution, isolation)
 - Design inference systems that scale without contention (workers, orchestration, distributed pipelines)
 
-## Technical stack (organized by capability)
+## Technical stack
 
 ### AI model execution
 - PyTorch inference pipelines

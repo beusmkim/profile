@@ -32,5 +32,9 @@ The plateau was driven by **prediction inconsistency** rather than model capacit
 ## Result
 Accuracy improved from **92% → 96.7%** without increasing model size.
 
+## Screenshots
+![VQA 0]({{ '/assets/img/projects/vqa0.png' | relative_url }})
+![VQA 2]({{ '/assets/img/projects/vqa2.png' | relative_url }})
+
 ## Key insight
 When training gains plateau, system-level inference strategy can be an effective lever. Multi-pass inference with consistency scoring improves reliability by turning stochastic variability into a signal.

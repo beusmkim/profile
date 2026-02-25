@@ -8,7 +8,7 @@ permalink: /ko/experience
 ## Summary
 저는 고객 운영 경험과 AI/시스템 프로젝트 경험을 결합해, 문제 정의와 지표 중심의 개선을 우선합니다. 특히 latency, memory, 동시성 제약이 있는 환경에서 아키텍처와 런타임 최적화를 통해 재현 가능한 성능 개선을 만드는 데 강점이 있습니다.
 
-## Timeline (chronological)
+## Timeline
 
 ### Samsung Software AI Academy For Youth (SSAFY)
 **역할:** 프로젝트 기반 엔지니어(AI 시스템 / Applied ML)  

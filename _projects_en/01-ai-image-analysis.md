@@ -38,5 +38,10 @@ Profiling and symptom-driven investigation suggested the workload was **memory-b
 - Inference latency improvement: **~22%** (precision/quantization strategy exploration)
 - Improved stability under constrained GPUs (reduced OOM incidence and latency variance)
 
+## Screenshots
+![AI Image Analysis 0]({{ '/assets/img/projects/aiimage0.png' | relative_url }})
+![AI Image Analysis 2]({{ '/assets/img/projects/aiimage2.png' | relative_url }})
+![AI Image Analysis 3]({{ '/assets/img/projects/aiimage3.png' | relative_url }})
+
 ## Key insight
 For attention-heavy transformer workloads, runtime performance is frequently limited by **memory bandwidth and allocation behavior**, not pure compute. The most reliable gains came from aligning the execution path with hardware constraints (precision, transfers, allocation), rather than repeating training-only tuning.

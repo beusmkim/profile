@@ -17,14 +17,12 @@ I focus on aligning AI model execution with hardware constraints—memory bandwi
 ## Featured work (most relevant to AI silicon / runtime optimization)
 - **AI Image Analysis — Memory-Bound Inference Optimization**  
   FP16 reduced peak VRAM by ~38–40%, INT8 exploration improved latency by ~22%, and CUDA-level changes improved stability under constrained GPUs.  
-  [View project]({{ "/projects/01-ai-image-analysis" | relative_url }})
+  [**View project →**]({{ "/projects/01-ai-image-analysis" | relative_url }})
 
 - **OneTakeStudio — Compute-Isolated AI Inference System**  
   Separated streaming and inference workers to reduce contention and improved blocking behavior by ~35% under concurrent workloads.  
-  [View project]({{ "/projects/02-onetakestudio" | relative_url }})
+  [**View project →**]({{ "/projects/02-onetakestudio" | relative_url }})
 
 - **Satellite Data Center Siting — Distributed Geospatial Compute**  
   Tile-based partitioning + AWS Batch/S3 pipeline for large ERA5 datasets, designed for memory-safe horizontal scaling.  
-  [View project]({{ "/projects/03-aws-dc-siting" | relative_url }})
-
-If you are reviewing this as a hiring manager, start with the first project page; it contains the most direct evidence of hardware-aware reasoning.
+  [**View project →**]({{ "/projects/03-aws-dc-siting" | relative_url }})
