@@ -1,31 +1,97 @@
 ---
 layout: default
 title: Experience
-subtitle: "Execution history — roles, responsibilities, and measurable outcomes"
+subtitle: "Execution history — from constraint-based engineering to hardware-aware AI systems optimization"
 permalink: /ko/experience
 ---
 
-## Summary
-저는 고객 운영 경험과 AI/시스템 프로젝트 경험을 결합해, 문제 정의와 지표 중심의 개선을 우선합니다. 특히 latency, memory, 동시성 제약이 있는 환경에서 아키텍처와 런타임 최적화를 통해 재현 가능한 성능 개선을 만드는 데 강점이 있습니다.
+## Timeline (reverse chronological)
 
-## Timeline
+### 2025.07 – 2026.06  
+### Samsung Software AI Academy For Youth (SSAFY)  
+AI Systems / Inference Optimization Engineer
 
-### Samsung Software AI Academy For Youth (SSAFY)
-**역할:** 프로젝트 기반 엔지니어(AI 시스템 / Applied ML)  
-**초점:** 엔드투엔드 프로토타이핑, 추론 최적화, 분산 파이프라인, 시스템 아키텍처
+#### Focus
+- 하드웨어 인지형 추론 최적화
+- Memory-bound transformer 워크로드 진단
+- Precision 트레이드오프 설계 (FP16 / INT8)
+- CUDA 인지형 실행 구조 이해
+- Compute isolation 아키텍처(MSA)
 
-- **문제:** 학습 성능 개선이 정체되는 동안, 배포 환경 성능과 안정성(VRAM 스파이크, latency variance, 동시성 경합)이 병목이 되는 경우가 많았습니다.
-- **접근:** 학습 중심에서 벗어나 추론/런타임 레이어와 시스템 설계로 최적화 레버를 이동했습니다.
-  - 하드웨어 인지형 추론 최적화(FP16 적용, INT8 탐색, CUDA 인지형 실행 개념)
-  - latency-sensitive 경로와 inference worker를 분리하는 compute isolation(MSA) 설계
-  - 대용량 데이터 처리를 위한 분산 파이프라인(tile partitioning, AWS Batch + S3 오케스트레이션)
-  - VQA에서는 학습 정체 이후 multi-pass inference + 일관성 스코어링으로 추론 단계에서 신뢰도를 강화
-- **결과:** 프로젝트 전반에서 정량 성과를 확보했습니다.
-  - FP16 적용으로 peak VRAM ~38–40% 감소
-  - precision/quantization 탐색으로 latency ~22% 개선
-  - compute isolation으로 동시 요청 blocking ~35% 감소
-  - inference 전략으로 정확도 92% → 96.7% 개선
-- **학습:** 실제 성능은 모델 품질뿐 아니라 대역폭, 메모리 동작, 경합에 의해 결정됩니다. 아키텍처로 안정적인 baseline을 만든 뒤 최적화를 누적하는 접근이 가장 재현 가능했습니다.
+#### Key Work
+- Attention-heavy transformer 워크로드를 memory-bandwidth bound로 진단
+- FP16 mixed precision 적용 → Peak VRAM ~38–40% 감소
+- INT8 quantization 탐색 → Inference latency ~22% 개선
+- Compute isolation 설계 → 동시 요청 환경에서 blocking ~35% 감소
+- Multi-pass inference 오케스트레이션 → 정확도 92% → 96.7% 개선
 
+#### Strategic Learning
+모델 성능의 상한은 모델 크기보다 실행 경로와 메모리 제약에 의해 결정되는 경우가 많다.  
+아키텍처와 런타임 설계를 통해 재현 가능한 성능 개선을 만들 수 있음을 체득.
+
+---
+
+### 2025.08  
+### Graduation — Kyung Hee University  
+Mechanical Engineering
+
+- 제약 조건 기반 문제 해결 훈련
+- 물리적·자원적 한계 하에서의 시스템 사고
+- 에너지·재료·유동 등 제한 조건 속 최적화 사고 형성
+
+---
+
+### 2021.03 – 2024.02  
 ### LG U+ Retail / Sales Operations
-- 고객 상담/운영 환경에서 병목을 정의하고, 동선과 의사결정 흐름을 개선하는 방식으로 성과를 만들었습니다.
+
+#### Operational System Optimization
+- 매장 동선 및 2층 액세서리 매장 구조 재설계
+- CRM 기반 상담 프로세스 구조화
+- KPI(단말/요금제/액세서리/부가서비스) 구성 분석
+
+#### Result
+- 액세서리 결합률 개선
+- 상담 효율 향상 및 프로세스 마찰 감소
+- 실행 일관성 강화
+
+#### Learning
+비기술 환경 역시 하나의 시스템이며, 병목은 구조와 흐름에서 발생한다.  
+구조 재설계만으로도 처리량과 성과를 개선할 수 있다.
+
+---
+
+### 2021  
+### Illuminate — Fashion Brand Business
+
+Founder / Operator
+
+#### Execution
+- 온라인 기반 패션 브랜드 런칭 및 운영
+- 상품 소싱, 가격 전략, 마케팅, 물류 직접 관리
+- 전환율 및 트래픽 데이터를 기반으로 전략 반복 조정
+
+#### Outcome
+- 아이디어 → 실행 → 시장 검증까지 전체 라이프사이클 경험
+- 성과 제약으로 사업 종료
+
+#### Learning
+현실 세계에서는 실행 속도와 자원 배분이 생존을 결정한다.  
+아이디어보다 피드백 루프와 의사결정 구조가 더 중요하다는 것을 경험.
+
+---
+
+### 2019.07 – 2021.02  
+### Republic of Korea Army
+
+- 구조화된 조직 내 역할 수행
+- 제한된 자원과 명확한 규율 속에서의 실행 경험
+- 시스템 내 안정적 수행 능력 강화
+
+---
+
+### 2019.03 – 2025.08  
+### Kyung Hee University (Academic Period)
+
+- 열역학, 유체역학, 재료역학 기반 학습
+- 물리 제약 하에서의 문제 해결 훈련
+- 구조적 분석 및 체계적 사고 능력 강화
