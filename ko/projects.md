@@ -16,8 +16,8 @@ permalink: /ko/projects
 ## Hardware-aware inference & runtime optimization
 
 <div class="grid">
-  {% assign featured = site.projects_ko | where_exp: "p", "p.path contains '01-ai-image-analysis' or p.path contains '02-onetakestudio' or p.path contains '03-aws-dc-siting'" %}
-  {% for project in featured %}
+  {% for project in site.projects_ko %}
+    {% if project.path contains '01-ai-image-analysis' or project.path contains '02-onetakestudio' or project.path contains '03-aws-dc-siting' %}
     <a class="project-card" href="{{ project.url | relative_url }}">
       <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
       <div class="project-card-body">
@@ -25,14 +25,15 @@ permalink: /ko/projects
         <p>{{ project.excerpt | strip_html | truncate: 180 }}</p>
       </div>
     </a>
+    {% endif %}
   {% endfor %}
 </div>
 
 ## Applied ML systems (lower priority)
 
 <div class="grid">
-  {% assign rest = site.projects_ko | where_exp: "p", "p.path contains '07-ssafy-ai-crm' or p.path contains '08-churn-ltv' or p.path contains '09-vqa-qwen' or p.path contains '10-cafe-ops-automation'" %}
-  {% for project in rest %}
+  {% for project in site.projects_ko %}
+    {% if project.path contains '07-ssafy-ai-crm' or project.path contains '08-churn-ltv' or project.path contains '09-vqa-qwen' or project.path contains '10-cafe-ops-automation' %}
     <a class="project-card" href="{{ project.url | relative_url }}">
       <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
       <div class="project-card-body">
@@ -40,5 +41,6 @@ permalink: /ko/projects
         <p>{{ project.excerpt | strip_html | truncate: 180 }}</p>
       </div>
     </a>
+    {% endif %}
   {% endfor %}
 </div>
