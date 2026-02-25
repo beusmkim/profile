@@ -2,6 +2,8 @@
 layout: project
 title: "Satellite Data Center Siting — Partitioned Large-Scale Compute Design"
 image: /assets/img/projects/dc-siting-placeholder.jpg
+category: hardware
+priority: 4
 ---
 
 ## Overview

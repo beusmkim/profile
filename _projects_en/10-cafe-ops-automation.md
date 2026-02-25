@@ -2,6 +2,8 @@
 layout: project
 title: "Cafe Ops Automation — Workflow Standardization"
 image: /assets/img/projects/cafe-automation.jpg
+category: ml
+priority: 4
 ---
 
 ## Overview

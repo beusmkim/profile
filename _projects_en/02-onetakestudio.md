@@ -2,6 +2,8 @@
 layout: project
 title: "OneTakeStudio — Compute-Isolated AI Inference System"
 image: /assets/img/projects/onetakestudio_mainpage.png
+category: hardware
+priority: 3
 ---
 
 ## Overview

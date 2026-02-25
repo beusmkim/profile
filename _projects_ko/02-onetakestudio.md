@@ -2,6 +2,8 @@
 layout: project
 title: "OneTakeStudio — Compute-Isolated AI 추론 시스템"
 image: /assets/img/projects/onetakestudio_mainpage.png
+category: hardware
+priority: 3
 ---
 
 ## Overview

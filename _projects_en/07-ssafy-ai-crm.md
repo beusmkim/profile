@@ -6,6 +6,8 @@ period: "2025-2026"
 role: "AI · Data"
 stack: "Python, pandas, recommendation/classification modeling, LLM-assisted messaging"
 image: /assets/img/projects/crm_mainpage.png
+category: ml
+priority: 1
 order: 90
 featured: true
 links:

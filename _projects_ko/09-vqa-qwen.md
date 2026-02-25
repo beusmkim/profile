@@ -2,6 +2,8 @@
 layout: project
 title: "VQA 시스템 — 추론 오케스트레이션 기반 분산 감소"
 image: /assets/img/projects/vqa-qwen.jpg
+category: ml
+priority: 2
 ---
 
 ## Overview

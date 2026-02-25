@@ -2,6 +2,8 @@
 layout: project
 title: "Churn × LTV — Decision-Oriented Segmentation"
 image: /assets/img/projects/churn-ltv.jpg
+category: ml
+priority: 3
 ---
 
 ## Overview

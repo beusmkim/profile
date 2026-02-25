@@ -5,11 +5,11 @@ subtitle: "Case studies — problem, diagnosis, approach, results, and learnings
 permalink: /projects
 ---
 
-## Hardware-aware inference & runtime optimization
+## Hardware-aware Inference & Runtime Optimization
 
 <div class="grid">
-  {% for project in site.projects_en %}
-    {% if project.path contains '01-ai-image-analysis' %}
+  {% assign hw_projects = site.projects_en | where: "category", "hardware" | sort: "priority" %}
+  {% for project in hw_projects %}
     <a class="project-tile" href="{{ project.url | relative_url }}">
       <div class="project-thumb">
         <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
@@ -19,54 +19,14 @@ permalink: /projects
         <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
       </div>
     </a>
-    {% endif %}
-  {% endfor %}
-  {% for project in site.projects_en %}
-    {% if project.path contains '11-SHPB' %}
-    <a class="project-tile" href="{{ project.url | relative_url }}">
-      <div class="project-thumb">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
-      </div>
-      <div>
-        <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
-      </div>
-    </a>
-    {% endif %}
-  {% endfor %}
-  {% for project in site.projects_en %}
-    {% if project.path contains '02-onetakestudio' %}
-    <a class="project-tile" href="{{ project.url | relative_url }}">
-      <div class="project-thumb">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
-      </div>
-      <div>
-        <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
-      </div>
-    </a>
-    {% endif %}
-  {% endfor %}
-  {% for project in site.projects_en %}
-    {% if project.path contains '03-aws-dc-siting' %}
-    <a class="project-tile" href="{{ project.url | relative_url }}">
-      <div class="project-thumb">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
-      </div>
-      <div>
-        <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
-      </div>
-    </a>
-    {% endif %}
   {% endfor %}
 </div>
 
-## Applied ML systems (lower priority)
+## Applied ML Systems (Lower Priority)
 
 <div class="grid">
-  {% for project in site.projects_en %}
-    {% if project.path contains '07-ssafy-ai-crm' %}
+  {% assign ml_projects = site.projects_en | where: "category", "ml" | sort: "priority" %}
+  {% for project in ml_projects %}
     <a class="project-tile" href="{{ project.url | relative_url }}">
       <div class="project-thumb">
         <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
@@ -76,45 +36,5 @@ permalink: /projects
         <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
       </div>
     </a>
-    {% endif %}
-  {% endfor %}
-  {% for project in site.projects_en %}
-    {% if project.path contains '09-vqa-qwen' %}
-    <a class="project-tile" href="{{ project.url | relative_url }}">
-      <div class="project-thumb">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
-      </div>
-      <div>
-        <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
-      </div>
-    </a>
-    {% endif %}
-  {% endfor %}
-  {% for project in site.projects_en %}
-    {% if project.path contains '08-churn-ltv' %}
-    <a class="project-tile" href="{{ project.url | relative_url }}">
-      <div class="project-thumb">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
-      </div>
-      <div>
-        <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
-      </div>
-    </a>
-    {% endif %}
-  {% endfor %}
-  {% for project in site.projects_en %}
-    {% if project.path contains '10-cafe-ops-automation' %}
-    <a class="project-tile" href="{{ project.url | relative_url }}">
-      <div class="project-thumb">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}"/>
-      </div>
-      <div>
-        <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.excerpt | strip_html | truncate: 180 }}</div>
-      </div>
-    </a>
-    {% endif %}
   {% endfor %}
 </div>
