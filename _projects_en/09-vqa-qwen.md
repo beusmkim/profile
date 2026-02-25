@@ -94,3 +94,13 @@ This suggested that:
 When training improvements plateau, inference variance becomes a dominant factor.
 
 Treating inference as a stochastic process and reducing output variance through orchestration can significantly improve system-level reliability without modifying model weights.
+
+---
+
+## Screenshots
+
+![VQA Main]({{ '/assets/img/projects/vqa0.png' | relative_url }})
+[Open vqa2 original]({{ '/assets/img/projects/vqa2.png' | relative_url }})
+<a href="{{ '/assets/img/projects/vqa2.png' | relative_url }}" target="_blank" rel="noopener">
+  <img class="long-vertical" src="{{ '/assets/img/projects/vqa2.png' | relative_url }}" alt="VQA Long Screenshot (vqa2)" />
+</a>

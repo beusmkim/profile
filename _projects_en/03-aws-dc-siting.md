@@ -68,3 +68,13 @@ The bottleneck was not computational complexity, but partitioning strategy and d
 For large-scale workloads, partitioning and dataflow architecture define scalability ceilings more than raw compute.
 
 Bounding memory per execution unit creates predictable performance behavior.
+
+---
+
+## Screenshots
+
+![Tamna-eye Main Page]({{ '/assets/img/projects/Tamna-eye_mainpage.png' | relative_url }})
+![Tamna-eye Solution]({{ '/assets/img/projects/Tamna-eye_solution.png' | relative_url }})
+![Tamna-eye Presentation]({{ '/assets/img/projects/Tamna-eye_presentation.PNG' | relative_url }})
+![Tamna-eye Jeju Global Space Forum]({{ '/assets/img/projects/Tamna-eye_Jeju global space_forum.jpeg' | relative_url }})
+![Tamna-eye Team Photo]({{ '/assets/img/projects/Tamna-eye_단체샷.JPG' | relative_url }})

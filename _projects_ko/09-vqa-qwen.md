@@ -93,3 +93,13 @@ Qwen 2.5-7B 기반 VQA 시스템에서 학습 개선이 정체된 이후, 추론
 학습 개선이 정체될 경우, 추론 분산이 성능을 제한하는 주요 요소가 된다.
 
 추론을 확률적 프로세스로 보고 분산을 제어하면, 가중치 변경 없이도 시스템 신뢰도를 향상시킬 수 있다.
+
+---
+
+## Screenshots
+
+![VQA Main]({{ '/assets/img/projects/vqa0.png' | relative_url }})
+[vqa2 원본 보기]({{ '/assets/img/projects/vqa2.png' | relative_url }})
+<a href="{{ '/assets/img/projects/vqa2.png' | relative_url }}" target="_blank" rel="noopener">
+  <img class="long-vertical" src="{{ '/assets/img/projects/vqa2.png' | relative_url }}" alt="VQA Long Screenshot (vqa2)" />
+</a>

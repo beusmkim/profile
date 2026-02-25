@@ -48,3 +48,10 @@ links:
 
 ## Key insight
 현장 CRM에서 가장 큰 레버는 모델을 한 번 더 학습하는 것이 아니라, 신호를 의사결정 가능한 형태로 구조화하고 추천을 업무 흐름에 자연스럽게 녹이는 시스템 설계입니다.
+
+## Screenshots
+![CRM Main Page]({{ '/assets/img/projects/crm_mainpage.png' | relative_url }})
+![CRM Customer Detail]({{ '/assets/img/projects/crm_customer_detail.png' | relative_url }})
+![CRM Recommended]({{ '/assets/img/projects/crm_recommended.png' | relative_url }})
+![CRM Recommended Scripts]({{ '/assets/img/projects/crm_recommended_scripts.png' | relative_url }})
+![CRM Session Detail]({{ '/assets/img/projects/crm_session_detail.png' | relative_url }})

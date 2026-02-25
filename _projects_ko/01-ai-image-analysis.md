@@ -102,3 +102,11 @@ If bandwidth and allocation behavior dominate:
 
 Attention-heavy transformer inference is often constrained by memory bandwidth and allocation behavior rather than raw compute throughput.  
 Sustainable performance gains emerged from aligning precision, tensor lifecycle, and execution patterns with hardware limitations.
+
+---
+
+## Screenshots
+
+![AI Image 0]({{ '/assets/img/projects/aiimage0.png' | relative_url }})
+![AI Image 2]({{ '/assets/img/projects/aiimage2.png' | relative_url }})
+![AI Image 3]({{ '/assets/img/projects/aiimage3.png' | relative_url }})

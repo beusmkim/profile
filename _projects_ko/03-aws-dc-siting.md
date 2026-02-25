@@ -68,3 +68,13 @@ ERA5(zarr) 데이터는 단일 메모리 로딩에 부적합한 대용량 구조
 대규모 워크로드에서는 연산량보다 분할 전략과 데이터 흐름 설계가 확장성을 결정한다.
 
 메모리 상한을 명확히 제한하면 예측 가능한 성능 특성을 확보할 수 있다.
+
+---
+
+## Screenshots
+
+![Tamna-eye Main Page]({{ '/assets/img/projects/Tamna-eye_mainpage.png' | relative_url }})
+![Tamna-eye Solution]({{ '/assets/img/projects/Tamna-eye_solution.png' | relative_url }})
+![Tamna-eye Presentation]({{ '/assets/img/projects/Tamna-eye_presentation.PNG' | relative_url }})
+![Tamna-eye Jeju Global Space Forum]({{ '/assets/img/projects/Tamna-eye_Jeju global space_forum.jpeg' | relative_url }})
+![Tamna-eye Team Photo]({{ '/assets/img/projects/Tamna-eye_단체샷.JPG' | relative_url }})

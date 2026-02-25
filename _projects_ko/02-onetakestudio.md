@@ -70,3 +70,11 @@ priority: 3
 
 실시간 AI 시스템에서는 모델보다 구조가 성능 상한을 결정한다.  
 Critical path 격리는 하드웨어-소프트웨어 통합 설계와 유사한 원칙을 따른다.
+
+---
+
+## Screenshots
+
+![OneTakeStudio Main Page]({{ '/assets/img/projects/onetakestudio_mainpage.png' | relative_url }})
+![OneTakeStudio Generate Shorts]({{ '/assets/img/projects/onetakestudio_generate_shorts.png' | relative_url }})
+![OneTakeStudio Shorts Output]({{ '/assets/img/projects/onetakestudio_shorts_output.png' | relative_url }})

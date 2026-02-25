@@ -70,3 +70,11 @@ Resource contention between streaming I/O and inference workloads caused unstabl
 
 In real-time AI systems, architecture determines performance ceilings.  
 Isolation of critical paths mirrors hardware-software co-design principles.
+
+---
+
+## Screenshots
+
+![OneTakeStudio Main Page]({{ '/assets/img/projects/onetakestudio_mainpage.png' | relative_url }})
+![OneTakeStudio Generate Shorts]({{ '/assets/img/projects/onetakestudio_generate_shorts.png' | relative_url }})
+![OneTakeStudio Shorts Output]({{ '/assets/img/projects/onetakestudio_shorts_output.png' | relative_url }})
