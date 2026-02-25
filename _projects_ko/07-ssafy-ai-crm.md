@@ -1,0 +1,50 @@
+---
+layout: project
+title: "SSAFY AI CRM — Workflow-Integrated Recommendation"
+summary: "Defined segments from customer logs/purchase history, predicted conversion potential, and connected outputs to LLM-based scripts/messages."
+title_ko: "AI 기반 CRM 서비스 제작 (SSAFY)"
+summary_ko: "고객 로그/구매 이력으로 세그먼트를 정의하고 전환 가능성을 예측, LLM로 메시지/스크립트 생성까지 연결"
+period: "2025-2026"
+role: "AI · Data"
+stack: "Python, pandas, recommendation/classification modeling, LLM-assisted messaging"
+image: /assets/img/projects/crm_mainpage.png
+order: 90
+featured: true
+links:
+  - label: "Repository"
+    url: "https://github.com/BeusmKim/REPO"
+---
+
+## Overview
+고객 상담/운영 맥락에서 추천과 스크립트 지원을 통해 상담 품질의 일관성과 의사결정 속도를 개선하는 CRM 기반 프로젝트입니다. “모델 성능”보다 실제 업무 흐름에서 효용이 나는 형태(신호 구조화, 추천 근거, 상담 흐름 보조)에 초점을 맞췄습니다.
+
+## Problem
+현장 상담 흐름은 제약이 많습니다.
+- 고객 정보가 파편화되어 상담자가 매번 ‘처음부터’ 판단해야 함
+- 추천 품질이 상담자 개인 역량에 따라 흔들림
+- 상담 시간 증가가 곧 이탈/전환 저하로 이어질 수 있음
+
+## Diagnosis
+병목은 단일 모델의 정확도보다 “업무 프로세스”와 “신호의 구조화”에 있었습니다.
+- 상담 도중 수집되는 정보가 데이터로 남더라도, 의사결정에 바로 쓰기 어려운 형태
+- 추천 결과가 설명 불가능하면 현장 적용성이 낮음
+- 스크립트/질문 흐름이 표준화되지 않으면 품질 편차가 커짐
+
+## Approach
+### 신호 구조화 및 세션 중심 데이터 모델링
+- 상담 과정에서 생성되는 이벤트/선호/요구 사항을 세션 단위로 구조화
+- 고객 히스토리와 현재 세션을 연결해 추천 입력 신호로 사용
+
+### 추천 + 상담 스크립트 지원 결합
+- 추천 결과를 단순 리스트가 아니라 “상담 흐름”에 삽입 가능한 형태로 제공
+- 추천 근거(사용자 입력/상황 신호)를 함께 제공해 적용성을 확보
+
+### 운영 지표 관점 검증
+- 상담 소요 시간, 추천 전환, 상담 품질(일관성) 같은 운영 지표 관점에서 개선 여부를 확인
+
+## Result
+- 추천 생성과 상담 진행이 더 빠르고 일관되게 수행될 수 있는 구조를 구축
+- 상담자 편차를 줄이는 방향으로 워크플로우를 정리하고, 추천 근거를 제공해 현장 적용성을 높임
+
+## Key insight
+현장 CRM에서 가장 큰 레버는 “모델 한 번 더 학습”이 아니라, 신호를 의사결정 가능한 형태로 구조화하고 추천을 업무 흐름에 자연스럽게 녹이는 시스템 설계입니다.

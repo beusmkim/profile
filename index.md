@@ -4,37 +4,27 @@ title: Home
 ---
 
 # Beumsu Kim
-### Hardware-Aware AI Software for GPU-Constrained Execution
+### Hardware-Aware AI Systems Engineer (CUDA · FP16/INT8 · Memory/Latency)
 
-I optimize AI runtime behavior under hardware constraints, with focus on memory efficiency, latency stability, and contention control.
-My scope is model execution and system-level performance engineering aligned with AI silicon validation needs.
+I focus on aligning AI model execution with hardware constraints—memory bandwidth, VRAM footprint, and runtime behavior—so systems remain stable and efficient under real workload pressure.
 
----
+## What I optimize
+- Memory-bound transformer execution (attention-heavy workloads)
+- Precision and deployment trade-offs (FP16, INT8)
+- GPU utilization and latency stability under concurrency
+- Inference system architecture (compute isolation, distributed workers)
 
-## Featured Projects
+## Featured work (most relevant to AI silicon / runtime optimization)
+- **AI Image Analysis — Memory-Bound Inference Optimization**  
+  FP16 reduced peak VRAM by ~38–40%, INT8 exploration improved latency by ~22%, and CUDA-level changes improved stability under constrained GPUs.  
+  [View project]({{ "/projects/01-ai-image-analysis" | relative_url }})
 
-### 1. AI Image Analysis - CUDA-Centric Inference Optimization
-- FP16 mixed precision reduced peak VRAM by approximately 38-40%.
-- INT8 experiments delivered approximately 22% latency improvement in tested settings.
-- Optimization decisions were driven by memory-bound vs compute-bound runtime analysis.
-- [View Project](/projects/01-ai-image-analysis)
+- **OneTakeStudio — Compute-Isolated AI Inference System**  
+  Separated streaming and inference workers to reduce contention and improved blocking behavior by ~35% under concurrent workloads.  
+  [View project]({{ "/projects/02-onetakestudio" | relative_url }})
 
----
+- **Satellite Data Center Siting — Distributed Geospatial Compute**  
+  Tile-based partitioning + AWS Batch/S3 pipeline for large ERA5 datasets, designed for memory-safe horizontal scaling.  
+  [View project]({{ "/projects/03-aws-dc-siting" | relative_url }})
 
-### 2. OneTakeStudio - Contention-Aware Distributed Inference
-- MSA-based compute isolation and worker separation reduced blocking by approximately 35%.
-- Runtime architecture was tuned for stable accelerator utilization under concurrency.
-- Focus was throughput stability and contention control, not UI-level product behavior.
-- [View Project](/projects/02-onetakestudio)
-
----
-
-### 3. Satellite Data Distributed Pipeline
-- Built AWS Batch + S3 distributed preprocessing for large geospatial/time-series workloads.
-- Structured partitioned execution for scale-out and reproducible data preparation.
-- Established pipeline behavior suited for large-scale model evaluation workflows.
-- [View Project](/projects/04-aws-dc-siting)
-
----
-
-For detailed positioning and capability breakdown, see **About**.
+If you are reviewing this as a hiring manager, start with the first project page; it contains the most direct evidence of hardware-aware reasoning.

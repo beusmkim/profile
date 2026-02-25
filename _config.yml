@@ -1,17 +1,18 @@
-title: "Beumsu Kim"
-description: "AI Engineer · Data Analyst · Modeling, Evaluation, Productization"
-url: "https://beusmkim.github.io"
-baseurl: "/profile"
-lang: "ko-KR"
+title: Beumsu Kim
+description: AI Engineer · Data Analyst · Modeling, Evaluation, Productization
+url: https://beusmkim.github.io
+baseurl: /profile
+lang: en-US
 markdown: kramdown
-
 plugins:
-  - jekyll-seo-tag
-
+- jekyll-seo-tag
 collections:
-  projects:
+  projects_en:
     output: true
     permalink: /projects/:name
-
+  projects_ko:
+    output: true
+    permalink: /ko/projects/:name
 exclude:
-  - README.md
+- README.md
+- _site

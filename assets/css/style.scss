@@ -637,3 +637,9 @@ hr{
 @media (max-width: 520px){
   .lang-modal__card{margin: 12vh 14px 0;}
 }
+
+
+/* Language toggle */
+.lang-switch{display:flex; gap:8px; justify-content:center; margin-top:12px;}
+.btn.small{padding:8px 12px; font-size:12px; border-radius:999px;}
+.btn.small.active{font-weight:700;}

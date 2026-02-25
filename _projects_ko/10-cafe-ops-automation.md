@@ -1,0 +1,48 @@
+---
+layout: project
+title: "Cafe Ops Automation — Workflow Standardization"
+summary: "엑셀 수작업 운영을 자동화하는 프로그램을 설계·구현해 일일 업무를 30분 → 5분 이내로 단축"
+title_en: "Cafe Operations Automation for Cost/Inventory/Sales"
+summary_en: "Designed and implemented automation to replace manual spreadsheet operations, reducing daily work from 30 minutes to under 5 minutes."
+period: "2026"
+role: "Product Planner · Builder"
+stack: "Requirements, Data Modeling, Automation, (LLM assisted)"
+image: /assets/img/projects/cafe-automation.jpg
+order: 1000
+featured: false
+---
+
+## Overview
+카페 운영의 반복 업무(정산/재고/주문/리포팅 등)를 자동화하는 워크플로우를 설계한 프로젝트입니다. 기능 나열이 아니라, 운영의 병목을 줄이고 실수를 줄이는 “프로세스 자동화” 관점으로 접근했습니다.
+
+## Problem
+소규모 운영 환경에서는 반복 업무가 비용이 됩니다.
+- 수기/반수기 정리로 인한 오류 및 누락
+- 보고/정산 작업에 시간이 많이 소요
+- 운영 데이터가 쌓이더라도 활용(분석/개선)이 어려움
+
+## Diagnosis
+핵심 병목은 데이터가 “흩어져 있고”, 프로세스가 “표준화되지 않은 것”이었습니다.
+- 입력 채널이 여러 곳이면 정합성 관리가 어려움
+- 사람이 하는 반복 작업은 변동성과 오류를 동반
+- 자동화는 기능보다 데이터 파이프라인/검증 규칙이 중요
+
+## Approach
+### 입력-처리-출력의 표준화
+- 운영 이벤트를 일관된 포맷으로 수집/저장
+- 검증 규칙을 두어 이상치/누락을 조기에 감지
+
+### 자동 리포팅/대시보드형 산출
+- 운영자가 바로 확인 가능한 리포트 형태로 출력
+- 반복 업무를 줄이고, 운영 개선에 집중할 수 있게 설계
+
+### 확장 가능한 구조
+- 향후 채널/기능 확장이 가능하도록 모듈 형태로 구성
+- 운영 규모가 커져도 프로세스가 무너지지 않게 설계
+
+## Result
+- 반복 업무 시간을 줄이고, 오류 가능성을 낮추는 자동화 흐름을 구축
+- 운영 데이터의 재사용성을 높여 추후 분석/개선이 가능한 기반 마련
+
+## Key insight
+운영 자동화는 “스크립트 몇 개”가 아니라, 데이터 표준화와 검증 규칙을 포함한 파이프라인 설계가 핵심입니다.

@@ -1,62 +1,37 @@
 ---
 layout: default
 title: Experience
-subtitle: "Data-driven execution history from customer operations to measurable outcomes"
+subtitle: "Execution history — roles, responsibilities, and measurable outcomes"
 permalink: /experience
 ---
 
+## Summary
+My experience combines customer operations, applied AI projects, and system-level performance reasoning. I prioritize clear problem framing, measurable outcomes, and architecture-first improvements under real constraints (latency, memory, concurrency).
+
 ## Timeline (chronological)
-<div class="timeline">
-<div class="card">
-  <div class="kpi">2025.07 - 2026.06</div>
-  <strong>SSAFY (Samsung Software AI Academy For Youth)</strong>
-</div>
-<div class="card">
-  <div class="kpi">2021.03 - 2025.02</div>
-  <strong>CMC Co., Sales Operations Team - LG U+ Agency Store Manager</strong>
-  <br/><br/>
-  <strong>Data-oriented responsibilities</strong><br/>
-  - Defined customer segments and priority targets through CRM data analysis<br/>
-  - Standardized execution process with segment-specific consultation scripts and offer strategies<br/>
-  - Redesigned sales objective framework from acquisition-centric to conversion-centric based on sales and conversion data<br/><br/>
 
-  <strong>Quantified outcomes</strong><br/>
-  - Improved conversion rate by 20% through segment-based execution<br/>
-  - Increased customer satisfaction and selected as "Kind Store" for 3 consecutive months<br/>
-  - Exceeded monthly sales targets by 15%<br/>
-  - Opened a phone accessory shop on the second floor and improved cross-store sales through traffic flow optimization
-</div>
-<div class="card">
-  <div class="kpi">2021.03 - 2022.06</div>
-  <strong>Illuminate Co. / Personal Business (Fashion brand "DISPEL")</strong>
-  <br/><br/>
-  <strong>Data-oriented responsibilities</strong><br/>
-  - Planned product lineup and marketing priorities using sales and traffic data<br/>
-  - Adjusted campaign strategy by channel performance comparison (Smart Store, SNS)<br/>
-  - Built inventory and operating risk criteria using customer response data<br/><br/>
+### Samsung Software AI Academy For Youth (SSAFY)
+**Role:** Project-based engineer (AI systems / applied ML)  
+**Focus:** End-to-end AI prototyping, inference optimization, distributed pipelines, and system architecture
 
-  <strong>Quantified outcomes</strong><br/>
-  - Increased new customer inflow by 40% through online campaigns<br/>
-  - Achieved 30% online sales growth in a target product line<br/><br/>
+- **Problem:** Training improvements often plateau while deployment performance and reliability remain unstable (VRAM spikes, latency variance, contention under concurrency).
+- **Approach:** Shifted optimization to the inference/runtime layer and system design.
+  - Built hardware-aware inference optimizations (FP16 deployment, INT8 exploration, CUDA-aware execution concepts)
+  - Designed compute isolation architectures (MSA) separating latency-sensitive paths from inference workers
+  - Implemented scalable data pipelines for large datasets (tile-based partitioning, AWS Batch + S3 orchestration)
+  - When training gains stalled (VQA), used inference orchestration (multi-pass inference + consistency scoring) to improve reliability without increasing model size
+- **Result:** Delivered measurable improvements across projects:
+  - Peak VRAM reduced by ~38–40% via FP16 deployment
+  - Inference latency improved by ~22% via precision/quantization strategy exploration
+  - Blocking reduced by ~35% under concurrency through compute isolation
+  - Accuracy improved from 92% → 96.7% through inference-stage strategy design
+- **Learning:** System performance is dictated by bandwidth, memory behavior, and contention as much as model quality. Architecture and runtime design create stable baselines where optimizations compound safely.
 
-  <strong>Learning points</strong><br/>
-  - Verified that target definition and demand forecasting quality directly drive results<br/>
-  - Applied this principle to later AI/data projects with priority on variable design, hypothesis validation, and risk control
-</div>
-<div class="card">
-  <div class="kpi">2019.07 - 2021.02</div>
-  <strong>Republic of Korea Army</strong>
-</div>
-<div class="card">
-  <div class="kpi">2019.03 - 2025.08</div>
-  <strong>Kyung Hee University</strong><br/>
-  <span class="kpi">B.S. in Mechanical Engineering</span>
-</div>
-</div>
+### LG U+ Retail / Sales Operations
+**Role:** Sales Associate / Customer Operations  
+**Focus:** Customer consultation, CRM execution, store performance improvement
 
-## Core strengths for AI / Data Analyst roles
-<div class="card">
-  - <strong>Problem definition</strong>: Convert operational problems into data structures (variables, segments, metrics)<br/>
-  - <strong>Analysis-to-execution</strong>: Turn analytical findings into workflows and scripts, not just reports<br/>
-  - <strong>Outcome focus</strong>: Iterate improvements by measurable KPIs such as conversion, revenue, and time reduction
-</div>
+- **Problem:** Improve conversion and customer flow with limited floor space and competing offers.
+- **Approach:** Repositioned accessory placement and optimized store layout to align with customer movement patterns.
+- **Result:** Improved cross-sell attachment and reduced consultation friction (tracked via daily sales mix and store KPIs).
+- **Learning:** Operational constraints behave like system constraints; isolating bottlenecks and redesigning flow produces outsized gains.
