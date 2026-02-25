@@ -19,10 +19,19 @@
     <div class="shell">
       {% include sidebar.html %}
 
-      <main class="content">
-        {% assign en_path = "/" %}
-        {% assign ko_path = "/ko/" %}
-        {% if page.url contains "/ko/about" or page.url contains "/about" %}
+        <main class="content">
+          {% assign en_path = "/" %}
+          {% assign ko_path = "/ko/" %}
+        {% if page.collection == "projects_en" %}
+          {% assign en_path = page.url %}
+          {% assign ko_path = page.url | replace_first: "/projects/", "/ko/projects/" %}
+          {% if page.url == "/projects/11-shpb" or page.url == "/projects/11-shpb/" %}
+            {% assign ko_path = "/ko/projects/11-shpb-ko" %}
+          {% endif %}
+        {% elsif page.collection == "projects_ko" %}
+          {% assign ko_path = page.url %}
+          {% assign en_path = page.url | replace_first: "/ko/projects/", "/projects/" | replace: "-ko", "" %}
+        {% elsif page.url contains "/ko/about" or page.url contains "/about" %}
           {% assign en_path = "/about" %}
           {% assign ko_path = "/ko/about" %}
         {% elsif page.url == "/projects" or page.url == "/projects/" or page.url == "/ko/projects" or page.url == "/ko/projects/" %}
