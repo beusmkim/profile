@@ -16,7 +16,7 @@ permalink: /projects
       </div>
       <div>
         <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.summary | default: project.excerpt | default: project.content | markdownify | strip_html | normalize_whitespace | truncate: 180 }}</div>
+        <div class="kpi">{{ project.summary | default: project.content | strip_html | normalize_whitespace | remove_first: "Overview " | truncate: 180 }}</div>
       </div>
     </a>
   {% endfor %}
@@ -33,7 +33,7 @@ permalink: /projects
       </div>
       <div>
         <div class="project-title">{{ project.title }}</div>
-        <div class="kpi">{{ project.summary | default: project.excerpt | default: project.content | markdownify | strip_html | normalize_whitespace | truncate: 180 }}</div>
+        <div class="kpi">{{ project.summary | default: project.content | strip_html | normalize_whitespace | remove_first: "Overview " | truncate: 180 }}</div>
       </div>
     </a>
   {% endfor %}
