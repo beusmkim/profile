@@ -3,9 +3,8 @@
     <img class="avatar" src="{{ "/assets/img/profile.jpg" | relative_url }}" alt="Profile photo" />
     <div class="name">Beumsu Kim</div>
     <div class="role">AI Engineer · Data Analyst</div>
-    <div class="role">Samsung Software AI Academy For Youth
     <div class="role">Samsung Software AI Academy For Youth</div>
-    <div class="role">Kyung Hee University · Mechanical Engineering</div></div>
+    <div class="role">Kyung Hee University · Mechanical Engineering</div>
 
     <div class="chips">
       <span>Machine Learning</span>
@@ -19,19 +18,7 @@
       <a class="btn" href="https://github.com/BeusmKim">GitHub</a>
       <a class="btn" href="mailto:beumsu0702@naver.com">Email</a>
       <a class="btn" href="{{ "/assets/resume.pdf" | relative_url }}">Resume</a>
-      <div class="lang-switch">
-  {% assign u = page.url %}
-  {% if u contains '/ko/' %}
-    {% assign en_url = u | replace_first:'/ko','' %}
-    {% if en_url == '' %}{% assign en_url = '/' %}{% endif %}
-    <a class="btn small active" href="{{ u | relative_url }}">KO</a>
-    <a class="btn small" href="{{ en_url | relative_url }}">EN</a>
-  {% else %}
-    {% assign ko_url = '/ko' | append: u %}
-    <a class="btn small" href="{{ ko_url | relative_url }}">KO</a>
-    <a class="btn small active" href="{{ u | relative_url }}">EN</a>
-  {% endif %}
-</div>
+    </div>
   </div>
 
   <nav class="nav">
@@ -81,4 +68,3 @@
     <div class="line">Email: <a href="mailto:beumsu0702@naver.com">beumsu0702@naver.com</a></div>
   </div>
 </aside>
-
