@@ -2,6 +2,8 @@
 layout: project
 title: "AI Image Analysis — Memory-Bound 추론 최적화"
 image: /assets/img/projects/aiimage0.png
+category: hardware
+priority: 1
 ---
 
 ## Overview
