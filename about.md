@@ -7,7 +7,7 @@ title: About
 
 I am an AI Systems Engineer focused on hardware-aware model execution and runtime optimization. My work prioritizes measurable performance improvements under hardware constraints, especially where transformer workloads become memory-bandwidth limited.
 
-## Technical profile (what I can do)
+## Technical profile
 I work at the boundary between models and execution:
 
 - Diagnose performance ceilings (memory-bound vs compute-bound behavior)
