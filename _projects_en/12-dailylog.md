@@ -256,6 +256,7 @@ Each subsystem's constraint defined the solution. Measurement before optimizatio
 
 ## Screenshots
 
+![DailyLog Team]({{ '/assets/img/projects/daily_log_team.JPG' | relative_url }})
 ![DailyLog Main]({{ '/assets/img/projects/daily_log_main.png' | relative_url }})
 ![DailyLog Checkin]({{ '/assets/img/projects/daily_log_checkin.png' | relative_url }})
 ![DailyLog Diary]({{ '/assets/img/projects/daily_log_diary.png' | relative_url }})

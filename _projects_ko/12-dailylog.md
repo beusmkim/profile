@@ -259,6 +259,7 @@ LLM 에이전트의 안정성은 더 강력한 모델이 아니라 프롬프트 
 
 ## Screenshots
 
+![DailyLog 팀]({{ '/assets/img/projects/daily_log_team.JPG' | relative_url }})
 ![DailyLog 메인]({{ '/assets/img/projects/daily_log_main.png' | relative_url }})
 ![DailyLog 체크인]({{ '/assets/img/projects/daily_log_checkin.png' | relative_url }})
 ![DailyLog 일기]({{ '/assets/img/projects/daily_log_diary.png' | relative_url }})
