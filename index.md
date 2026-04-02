@@ -43,6 +43,7 @@ Calibrated constitutive parameters against measured stress-strain curves and imp
 🏆 Excellence Award — SSAFY Special Project (2026)
 Built end-to-end voice journaling system: int8-quantized on-device ASR (~300ms), slot-based LLM agent for diary auto-generation, and Thompson Sampling recommendation engine.
 Reduced diary completion time from ~20 min to ~5 min (~70%).
+
 [**View project →**]({{ "/projects/12-dailylog" | relative_url }})
 
 ---
