@@ -5,7 +5,7 @@ subtitle: "Case studies — problem, diagnosis, approach, results, and learnings
 permalink: /ko/projects
 ---
 
-## 하드웨어 인지형 추론 및 런타임 최적화
+## AI 추론 & 시스템 최적화
 
 <div class="grid">
   {% assign hw_projects = site.projects_ko | where: "category", "hardware" | sort: "priority" %}
@@ -22,7 +22,7 @@ permalink: /ko/projects
   {% endfor %}
 </div>
 
-## 응용 ML 시스템
+## 데이터 기반 의사결정 시스템
 
 <div class="grid">
   {% assign ml_projects = site.projects_ko | where: "category", "ml" | sort: "priority" %}

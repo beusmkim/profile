@@ -2,7 +2,7 @@
 layout: project
 title: "Satellite Data Center Siting — Partitioned Large-Scale Compute Design"
 image: /assets/img/projects/Tamna-eye_mainpage.png
-category: hardware
+category: ml
 priority: 4
 ---
 

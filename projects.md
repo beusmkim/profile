@@ -5,7 +5,7 @@ subtitle: "Case studies — problem, diagnosis, approach, results, and learnings
 permalink: /projects
 ---
 
-## Hardware-aware Inference & Runtime Optimization
+## AI Inference & Systems Optimization
 
 <div class="grid">
   {% assign hw_projects = site.projects_en | where: "category", "hardware" | sort: "priority" %}
@@ -22,7 +22,7 @@ permalink: /projects
   {% endfor %}
 </div>
 
-## Applied ML Systems
+## Data-Driven Decision Systems
 
 <div class="grid">
   {% assign ml_projects = site.projects_en | where: "category", "ml" | sort: "priority" %}

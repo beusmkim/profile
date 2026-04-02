@@ -2,7 +2,7 @@
 layout: project
 title: "VQA System — Inference-Orchestrated Variance Reduction"
 image: /assets/img/projects/vqa0.png
-category: ml
+category: hardware
 priority: 2
 ---
 
