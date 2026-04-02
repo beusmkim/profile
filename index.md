@@ -39,6 +39,14 @@ Calibrated constitutive parameters against measured stress-strain curves and imp
 
 ---
 
+### DailyLog — On-Device Voice AI Pipeline & Adaptive Recommendation System
+🏆 Excellence Award — SSAFY Special Project (2026)
+Built end-to-end voice journaling system: int8-quantized on-device ASR (~300ms), slot-based LLM agent for diary auto-generation, and Thompson Sampling recommendation engine.
+Reduced diary completion time from ~20 min to ~5 min (~70%).
+[**View project →**]({{ "/projects/12-dailylog" | relative_url }})
+
+---
+
 ### OneTakeStudio — Compute-Isolated AI Inference System  
 Redesigned architecture to decouple latency-sensitive streaming from GPU-bound inference workers.  
 Reduced blocking under concurrency by ~35% and stabilized latency variance.  
