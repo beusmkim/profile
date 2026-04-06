@@ -44,6 +44,14 @@ VQA 대회 데이터셋에서 Qwen3-VL-8B-Instruct를 LoRA로 파인튜닝, Base
 
 ---
 
+### SHPB Calibration — 고변형률 재료 특성화 & 모델 검증  
+Split Hopkinson Pressure Bar(SHPB) 실험으로 동적 재료 거동을 계측하고, 실험 stress-strain 곡선을 기반으로 구성 모델 파라미터를 보정.  
+Abaqus FEM 시뮬레이션으로 검증 — 제어공학의 시스템 식별과 동일한 measure → model → calibrate → validate 워크플로우 적용.
+
+[**프로젝트 보기 →**]({{ "/ko/projects/11-shpb-ko" | relative_url }})
+
+---
+
 ## Engineering Philosophy
 
 성능의 상한은 모델이 아니라 제약 조건에 의해 결정됩니다.

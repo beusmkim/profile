@@ -42,6 +42,14 @@ Explored model replacement, BLIP-based caption augmentation, hyperparameter sear
 
 ---
 
+### SHPB Calibration — High-Strain-Rate Material Characterization & Model Validation  
+Characterized dynamic material behavior via Split Hopkinson Pressure Bar experiments and calibrated a constitutive model against measured stress–strain curves.  
+Validated parameters through Abaqus FEM simulation — applying the same measure → model → calibrate → validate workflow central to physical system identification in control engineering.
+
+[**View project →**]({{ "/projects/11-shpb" | relative_url }})
+
+---
+
 ## Engineering Philosophy
 
 Performance ceilings are determined by constraint awareness.
