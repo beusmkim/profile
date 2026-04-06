@@ -4,22 +4,23 @@ title: Home
 ---
 
 # Beumsu Kim
-### AI Systems Engineer — Hardware-Constrained Inference & Runtime Optimization
+### AI Engineer — Physical System Modeling, Learning-Based Control & On-Device AI
 
-I design AI systems by diagnosing execution bottlenecks under real hardware constraints.  
-My work focuses on identifying whether performance ceilings are compute-bound or memory-bandwidth bound, and restructuring inference paths accordingly.
+I work at the intersection of physical system modeling and AI.
 
-Rather than increasing model size, I optimize precision, tensor lifecycle, and system architecture to produce measurable runtime gains.
+My background spans characterizing dynamic system behavior through experiment, calibrating models against empirical data, and training learning-based systems under real hardware constraints.
+
+From high-strain-rate material characterization (SHPB, Abaqus FEM) to large-scale VLM fine-tuning (LoRA, quantization) and on-device AI pipeline design — my work is grounded in measurement-driven validation at every stage.
 
 ---
 
 ## Core Competencies
 
-- Memory-bandwidth bound transformer diagnosis (attention-heavy workloads)
-- Mixed precision and quantization trade-off analysis (FP16 / INT8)
-- CUDA-aware execution reasoning and concurrency stabilization
-- Compute isolation architecture for latency-sensitive systems
-- Partitioned large-scale compute design (bounded memory execution)
+- Physical system characterization & constitutive model calibration (SHPB, FEM)
+- Experimental methodology: measure → model → calibrate → validate
+- Large-scale VLM fine-tuning under GPU constraints (LoRA, INT8 quantization, ensemble)
+- On-device AI system design (quantized ASR, slot-based LLM agent)
+- Hardware-constrained inference optimization (FP16 / INT8, CUDA-aware execution)
 
 ---
 

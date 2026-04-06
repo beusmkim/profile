@@ -5,23 +5,25 @@ permalink: /ko/
 ---
 
 # 김범수
-### 하드웨어 제약 기반 AI 시스템 엔지니어 (CUDA · FP16/INT8 · Memory/Latency)
+### AI 엔지니어 — 물리 시스템 모델링, 학습 기반 제어 & 온디바이스 AI
 
-저는 실제 하드웨어 제약 환경에서 AI 모델 실행 병목을 진단하고,  
-compute-bound인지 memory-bandwidth bound인지 구분한 뒤 실행 경로를 재설계하는 방식으로 성능을 개선합니다.
+저는 물리 시스템 모델링과 AI의 접점에서 일합니다.
 
-모델을 키우는 대신, 정밀도 전략·텐서 생명주기·아키텍처 구조를 조정해  
-측정 가능한 런타임 개선을 만드는 데 집중합니다.
+실험을 통해 동적 시스템 거동을 계측하고, 실측 데이터를 기반으로 모델을 보정하며,  
+실제 하드웨어 제약 하에서 학습 기반 시스템을 훈련하는 작업을 해왔습니다.
+
+고변형률 재료 특성화(SHPB, Abaqus FEM)부터 대형 VLM 파인튜닝(LoRA, 양자화),  
+온디바이스 AI 파이프라인 설계까지 — 모든 단계에서 측정 기반 검증을 중심에 둡니다.
 
 ---
 
 ## Core Competencies
 
-- Attention-heavy transformer의 memory-bound 특성 진단
-- Mixed precision 및 quantization(FP16 / INT8) 트레이드오프 설계
-- CUDA 인지형 실행 구조 및 동시성 안정화
-- Latency-sensitive 시스템을 위한 compute isolation 아키텍처
-- 메모리 상한을 제어하는 분할 기반 대규모 연산 설계
+- 물리 시스템 특성화 및 구성 모델 보정 (SHPB, FEM)
+- 실험 방법론: measure → model → calibrate → validate
+- GPU 제약 하 대형 VLM 파인튜닝 (LoRA, INT8 양자화, 앙상블)
+- 온디바이스 AI 시스템 설계 (양자화 ASR, 슬롯 기반 LLM 에이전트)
+- 하드웨어 제약 기반 추론 최적화 (FP16 / INT8, CUDA 인지형 실행)
 
 ---
 
