@@ -6,56 +6,49 @@ permalink: /ko/about
 
 # About
 
-저는 하드웨어 제약 환경에서 AI 추론 성능을 최적화하는 AI 시스템 엔지니어입니다.
+물리 시스템의 동적 거동을 실험으로 계측하고, 실측 데이터를 기반으로 모델을 보정하며, 실제 하드웨어 제약 하에서 학습 기반 시스템을 훈련합니다.
 
-실제 GPU 환경에서 실행 병목을 진단하고, 메모리 대역폭·VRAM 할당 동작·동시성 압력과 같은 측정 가능한 제약을 기준으로 추론 경로를 재설계합니다.
-
-모델을 키우는 대신, 실행 구조를 바꾸는 접근을 우선합니다.
+고변형률 재료 특성화(SHPB, Abaqus FEM)부터 대형 VLM 파인튜닝(LoRA, 양자화), 온디바이스 AI 파이프라인 설계까지 — 모든 단계에서 측정 기반 검증을 중심에 둡니다.
 
 ---
 
 ## Core Capabilities
 
-저는 모델 설계와 하드웨어 실행 사이 경계에서 다음을 수행합니다.
-
-- memory-bound vs compute-bound 성능 상한 진단
-- transformer attention 워크로드의 대역폭 특성 분석
-- FP16 / INT8 기반 precision 전략 설계 및 trade-off 분석
-- 동시 추론 환경에서 latency 안정화
-- 실시간 시스템을 위한 compute isolation 아키텍처 설계
-- 대규모 데이터 처리를 위한 분할 기반 실행 구조 설계
+- 물리 시스템 특성화 및 구성 모델 보정 (SHPB, Abaqus FEM)
+- 실험 방법론: measure → model → calibrate → validate
+- GPU 제약 하 대형 VLM 파인튜닝 (LoRA, INT8 양자화, 앙상블)
+- 온디바이스 AI 시스템 설계 (양자화 ASR, 슬롯 기반 LLM 에이전트)
+- 하드웨어 제약 기반 추론 최적화 (FP16 / INT8, CUDA 인지형 실행)
 
 ---
 
 ## Technical Stack
 
-### AI 실행 및 프로파일링
-- PyTorch 추론 파이프라인
+### Physical System Modeling
+- Split Hopkinson Pressure Bar (SHPB) 실험 설계 및 계측
+- 구성 모델 파라미터 보정 (SK material model)
+- Abaqus FEM 시뮬레이션 및 실험 검증
+
+### AI & Machine Learning
+- Qwen3-VL LoRA 파인튜닝 (rank 16/32, INT8 양자화)
+- BLIP 보조 모델 실험 및 앙상블 (Logistic Regression 메타 모델)
+- int8 양자화 온디바이스 ASR, 슬롯 기반 LLM 에이전트
+- Thompson Sampling 기반 추천 엔진
+
+### Inference Optimization
+- Mixed precision 배포 (FP16 / INT8)
 - torch.profiler 기반 kernel-level 분석
-- Transformer attention 메모리 풋프린트 분석
-- Roofline 관점의 arithmetic intensity 해석
-
-### Precision 및 런타임 최적화
-- Mixed precision 배포 (FP16)
-- Quantization 실험 (INT8)
-- 텐서 생명주기 및 메모리 할당 최적화
-- CPU↔GPU 전송 최소화
-- 동시성 환경에 맞춘 실행 경로 재구성
-
-### 시스템 아키텍처
-- MSA 기반 compute isolation 설계
-- 워커 오케스트레이션을 통한 자원 경합 제어
-- latency-sensitive 경로 분리
-- AWS Batch + S3 기반 분산 실행 구조
+- Roofline 관점의 memory-bound vs compute-bound 진단
+- CUDA 인지형 실행 구조 및 동시성 안정화
 
 ---
 
-## 정량 근거
+## Representative Evidence
 
-- FP16 적용으로 Peak VRAM ~38–40% 감소
-- Precision 및 실행 구조 개선으로 Latency ~22% 개선
-- Compute isolation으로 동시 요청 blocking ~35% 감소
-- 추론 단계 전략으로 정확도 92% → 96.7% 개선
+- SHPB 실험 기반 구성 모델 보정 → Abaqus FEM 시뮬레이션 오차 감소
+- VQA Public Score: Baseline 0.76 → 앙상블 최종 **0.96759**
+- DailyLog 일기 작성 시간: ~20분 → ~5분 (~70% 단축)
+- Peak VRAM ~38–40% 감소, Inference latency ~22% 개선
 
 ---
 
@@ -67,5 +60,3 @@ permalink: /ko/about
 - 최적화 전에 측정
 - 미세 조정보다 아키텍처 격리
 - 무작정 스케일링보다 하드웨어 정렬된 실행 설계
-
-AI 실리콘 검증, 런타임 효율, HW-SW 통합을 다루는 팀에서 기여하는 것이 목표입니다.
