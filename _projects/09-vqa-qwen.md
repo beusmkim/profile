@@ -1,18 +1,18 @@
 ---
 layout: project
-title: VQA(Visual Question Answering) — 성능 정체를 넘기기 위한 룰 기반 보정
-summary: "Qwen 2.5-7B 학습 후 92% 정체 구간에서, 룰 기반 점수/다중 예측 보정으로 96.7%까지 개선"
-title_en: "VQA Rule-based Calibration Beyond Performance Plateau"
-summary_en: "After Qwen 2.5-7B plateaued around 92%, improved to 96.7% with rule-based scoring and multi-pass prediction calibration."
+title: VLM 파인튜닝 — Qwen3-VL LoRA 학습 & 앙상블
+summary: "Qwen3-VL-8B LoRA 파인튜닝, BLIP 캡션 실험, 하이퍼파라미터 탐색, 로지스틱 회귀 앙상블로 Baseline 0.76 → 최종 0.96759 달성"
+title_en: "VLM Fine-Tuning — Qwen3-VL LoRA Training & Ensemble for VQA"
+summary_en: "Fine-tuned Qwen3-VL-8B with LoRA, explored BLIP captioning, ran hyperparameter search across 3 configs, and applied logistic regression ensemble — advancing baseline 0.76 to final score 0.96759."
 period: "2026"
 role: "AI Engineer"
-stack: "Data Augmentation, Fine-tuning, Inference Strategy"
+stack: "Qwen3-VL, LoRA, BLIP, Logistic Regression Ensemble, 8bit Quantization"
 image: /assets/img/projects/vqa0.png
 order: 45
 featured: true
 links:
   - label: "Repository"
-    url: "https://github.com/BeusmKim/REPO"
+    url: "https://github.com/BeusmKim/VQA-Qwen3-VL-Finetune"
 ---
 
 ## Problem

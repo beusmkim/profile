@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "VQA System — Inference-Orchestrated Variance Reduction"
+title: "VLM Fine-Tuning — Qwen3-VL LoRA Training & Ensemble for VQA"
 image: /assets/img/projects/vqa0.png
 category: hardware
 priority: 2
@@ -8,99 +8,88 @@ priority: 2
 
 ## Overview
 
-A Visual Question Answering system built on Qwen 2.5-7B, redesigned to improve reliability when training improvements plateaued.
+Fine-tuned a large Vision-Language Model (Qwen3-VL-8B-Instruct) on a VQA competition dataset using LoRA, advancing from a baseline score of 0.76 to a final Public Score of **0.96759**.
 
-Instead of increasing model size or retraining complexity, the focus shifted to inference-stage variance control.
+The project involved systematic model selection, auxiliary model experiments, hyperparameter search across multiple LoRA configurations, and a logistic regression ensemble — all within fixed GPU memory constraints.
+
+Vision-Language Models are the architectural backbone of VLA (Vision-Language-Action) systems increasingly used in robot learning and manipulation. This project provided hands-on experience in efficiently training and scaling such models under real hardware limits.
 
 ---
 
 ## Problem
 
-After data augmentation and hyperparameter tuning, validation accuracy plateaued at 92%.
+The provided baseline used **Qwen2.5-VL-3B-Instruct**, which scored **0.76028** — insufficient for the target performance level.
 
-Observed issues:
-
-- High variability in predictions for ambiguous inputs
-- Stochastic instability across repeated inference calls
-- Training iterations increased compute cost without significant gains
-
-The bottleneck was not model capacity, but prediction consistency.
+The challenge was not just model selection, but finding the highest-performing model that could still be trained within the available GPU memory budget.
 
 ---
 
-## Measurement Context
+## Step 1 — Model Replacement
 
-- Single-GPU inference evaluation
-- Multiple repeated inference runs per input
-- Accuracy measured across ambiguous validation samples
+**Qwen2.5-VL-3B-Instruct → Qwen3-VL-8B-Instruct**
 
-Observed:
-- Output instability across identical inputs
-- Confidence variance between candidate answers
-- Performance degradation in edge-case reasoning
+Evaluated candidate models by balancing benchmark performance against memory feasibility.  
+Qwen3-VL-8B-Instruct was selected as the highest-performing model trainable within the given constraints.
 
----
-
-## Diagnosis
-
-The model exhibited stochastic variance in uncertain regions.
-
-This suggested that:
-
-- Single-pass inference was brittle
-- Variance reduction could improve reliability
-- Inference orchestration could outperform additional training
+| Model | Public Score |
+|---|---|
+| Qwen2.5-VL-3B-Instruct (baseline) | 0.76028 |
+| Qwen3-VL-8B-Instruct | 0.90174 |
 
 ---
 
-## Approach
+## Step 2 — Auxiliary Model Experiment (BLIP Captioning)
 
-### Multi-Pass Inference
+Introduced BLIP as a preprocessing step to generate image captions, which were appended to training labels to enrich the learning signal.
 
-- Executed repeated inference per image-question pair
-- Collected multiple candidate outputs
+| Configuration | Public Score |
+|---|---|
+| Qwen3-VL-8B (no captioning) | 0.90174 |
+| Qwen3-VL-8B + BLIP Captioning | 0.92849 |
 
-### Consistency-Based Scoring
-
-- Ranked candidates based on agreement and confidence stability
-- Penalized outlier predictions
-- Reinforced consensus-driven outputs
-
-### Structured Post-Processing
-
-- Introduced deterministic correction logic
-- Reduced output variance across runs
+While the gain was measurable, BLIP's memory and compute overhead relative to its marginal improvement made it impractical for subsequent experiments. Dropped in later stages.
 
 ---
 
-## Result
+## Step 3 — LoRA Hyperparameter Search
 
-- Accuracy improved from 92% → 96.7%
-- Reduced prediction instability in ambiguous cases
-- Improved reliability without increasing model size
+Trained three LoRA variants with different rank, learning rate, quantization, and target module configurations.  
+To improve generalization, answer choices were **randomly shuffled during data loading** so that the correct answer position varied across training passes on the same sample.
+
+| | Model 1 | Model 2 | Model 3 |
+|---|---|---|---|
+| LoRA Rank | 16 | 32 | 32 |
+| Learning Rate | 1e-4 | 1.5e-4 | 1.5e-4 |
+| Epochs | 3 | 3 | 3 |
+| Quantization | None (16bit) | None (16bit) | 8bit |
+| Target Modules | q/k/v/o\_proj | q/k/v/o\_proj | q/k/v/o\_proj + gate/up/down\_proj |
+| Public Score | **0.96193** | 0.95884 | **0.96244** |
 
 ---
 
-## Limitations
+## Step 4 — Logistic Regression Ensemble
 
-- Increased inference time due to repeated passes
-- Not suitable for strict real-time systems
-- Further improvements may require ensemble or calibration tuning
+Each of the three models was evaluated to produce per-choice probabilities (a/b/c/d) for every question.  
+These probability vectors were concatenated and fed into a **logistic regression meta-model**, which learned how to optimally weight each model's predictions.
+
+**Final Public Score: 0.96759**
 
 ---
 
 ## Key Insight
 
-When training improvements plateau, inference variance becomes a dominant factor.
+Training a large VLM efficiently under GPU constraints requires iterative experimentation across model scale, auxiliary inputs, LoRA configuration, and ensemble strategy.
 
-Treating inference as a stochastic process and reducing output variance through orchestration can significantly improve system-level reliability without modifying model weights.
+The structured ablation — each step measurable and comparable — mirrors the kind of systematic validation required when integrating learned models into physical control systems, where confidence in each component matters.
 
 ---
 
 ## Screenshots
 
-![VQA Main]({{ '/assets/img/projects/vqa0.png' | relative_url }})
-[Open vqa2 original]({{ '/assets/img/projects/vqa2.png' | relative_url }})
-<a href="{{ '/assets/img/projects/vqa2.png' | relative_url }}" target="_blank" rel="noopener">
-  <img class="long-vertical" src="{{ '/assets/img/projects/vqa2.png' | relative_url }}" alt="VQA Long Screenshot (vqa2)" />
-</a>
+![System Instruction & Prompt Builder]({{ '/assets/img/projects/VLA3.png' | relative_url }})
+
+![Inference Prompt (no shuffle)]({{ '/assets/img/projects/VLA1.png' | relative_url }})
+
+![BLIP Caption Prompt]({{ '/assets/img/projects/VLA2.png' | relative_url }})
+
+![Ensemble — Meta Model Results]({{ '/assets/img/projects/VLA4.png' | relative_url }})
