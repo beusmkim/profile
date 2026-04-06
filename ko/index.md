@@ -27,6 +27,14 @@ compute-bound인지 memory-bandwidth bound인지 구분한 뒤 실행 경로를 
 
 ## 대표 프로젝트
 
+### SHPB Calibration — 고변형률 재료 특성화 & 모델 검증  
+Split Hopkinson Pressure Bar(SHPB) 실험으로 동적 재료 거동을 계측하고, 실험 stress-strain 곡선을 기반으로 구성 모델 파라미터를 보정.  
+Abaqus FEM 시뮬레이션으로 검증 — 제어공학의 시스템 식별과 동일한 measure → model → calibrate → validate 워크플로우 적용.
+
+[**프로젝트 보기 →**]({{ "/ko/projects/11-shpb-ko" | relative_url }})
+
+---
+
 ### DailyLog — 온디바이스 음성 AI 파이프라인 & 적응형 추천 시스템
 🏆 우수상 — SSAFY 특화 프로젝트 (2026)
 int8 양자화 온디바이스 ASR(~300ms), 슬롯 기반 LLM 에이전트 일기 자동생성, 톰슨 샘플링 추천 엔진을 연결한 음성 일기 시스템.
@@ -41,14 +49,6 @@ VQA 대회 데이터셋에서 Qwen3-VL-8B-Instruct를 LoRA로 파인튜닝, Base
 모델 교체, BLIP 캡션 증강 실험, 3가지 LoRA 설정 하이퍼파라미터 탐색, 로지스틱 회귀 앙상블을 통해 최종 **0.96759** 달성.
 
 [**프로젝트 보기 →**]({{ "/ko/projects/09-vqa-qwen" | relative_url }})
-
----
-
-### SHPB Calibration — 고변형률 재료 특성화 & 모델 검증  
-Split Hopkinson Pressure Bar(SHPB) 실험으로 동적 재료 거동을 계측하고, 실험 stress-strain 곡선을 기반으로 구성 모델 파라미터를 보정.  
-Abaqus FEM 시뮬레이션으로 검증 — 제어공학의 시스템 식별과 동일한 measure → model → calibrate → validate 워크플로우 적용.
-
-[**프로젝트 보기 →**]({{ "/ko/projects/11-shpb-ko" | relative_url }})
 
 ---
 

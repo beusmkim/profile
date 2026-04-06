@@ -25,6 +25,14 @@ Rather than increasing model size, I optimize precision, tensor lifecycle, and s
 
 ## Representative Work
 
+### SHPB Calibration — High-Strain-Rate Material Characterization & Model Validation  
+Characterized dynamic material behavior via Split Hopkinson Pressure Bar experiments and calibrated a constitutive model against measured stress–strain curves.  
+Validated parameters through Abaqus FEM simulation — applying the same measure → model → calibrate → validate workflow central to physical system identification in control engineering.
+
+[**View project →**]({{ "/projects/11-shpb" | relative_url }})
+
+---
+
 ### DailyLog — On-Device Voice AI Pipeline & Adaptive Recommendation System
 🏆 Excellence Award — SSAFY Special Project (2026)
 Built end-to-end voice journaling system: int8-quantized on-device ASR (~300ms), slot-based LLM agent for diary auto-generation, and Thompson Sampling recommendation engine.
@@ -39,14 +47,6 @@ Fine-tuned Qwen3-VL-8B-Instruct with LoRA on a VQA competition dataset, improvin
 Explored model replacement, BLIP-based caption augmentation, hyperparameter search across 3 LoRA configurations, and logistic regression ensemble — achieving a final score of **0.96759**.
 
 [**View project →**]({{ "/projects/09-vqa-qwen" | relative_url }})
-
----
-
-### SHPB Calibration — High-Strain-Rate Material Characterization & Model Validation  
-Characterized dynamic material behavior via Split Hopkinson Pressure Bar experiments and calibrated a constitutive model against measured stress–strain curves.  
-Validated parameters through Abaqus FEM simulation — applying the same measure → model → calibrate → validate workflow central to physical system identification in control engineering.
-
-[**View project →**]({{ "/projects/11-shpb" | relative_url }})
 
 ---
 
